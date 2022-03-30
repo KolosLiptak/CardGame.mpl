@@ -1,0 +1,4 @@
+# Project exclude paths
+/languages/CardGameLanguage/classes_gen/
+/languages/CardGameLanguage/generator/classes_gen/
+/languages/CardGameLanguage/sandbox/classes_gen/
