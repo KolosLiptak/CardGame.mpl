@@ -63,7 +63,15 @@
   <node concept="1TIwiD" id="5q2m64Vw$ml">
     <property role="EcuMT" value="6233642008867653013" />
     <property role="TrG5h" value="Token" />
+    <property role="34LRSv" value="token" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3AQmWYMXSZH" role="1TKVEi">
+      <property role="IQ2ns" value="4158612253542158317" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5q2m64VwI2B" resolve="Property" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5q2m64VwGTP">
     <property role="EcuMT" value="6233642008867688053" />
@@ -128,6 +136,68 @@
       <property role="20kJfa" value="cards" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="5q2m64Vw$mk" resolve="Card" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3AQmWYMXT0f">
+    <property role="EcuMT" value="4158612253542158351" />
+    <property role="TrG5h" value="Player" />
+    <property role="34LRSv" value="player" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3AQmWYMXT0g" role="1TKVEi">
+      <property role="IQ2ns" value="4158612253542158352" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="piles" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3AQmWYMY35i" resolve="Pile" />
+    </node>
+    <node concept="1TJgyj" id="3AQmWYMXT0i" role="1TKVEi">
+      <property role="IQ2ns" value="4158612253542158354" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="tokens" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5q2m64Vw$ml" resolve="Token" />
+    </node>
+    <node concept="PrWs8" id="3AQmWYMXT0l" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="3AQmWYMY6tT" role="1TKVEi">
+      <property role="IQ2ns" value="4158612253542213497" />
+      <property role="20kJfa" value="deck" />
+      <ref role="20lvS9" node="5q2m64Vx6v7" resolve="Deck" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3AQmWYMY35i">
+    <property role="EcuMT" value="4158612253542199634" />
+    <property role="TrG5h" value="Pile" />
+    <property role="34LRSv" value="pile" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3AQmWYMY35l" role="1TKVEi">
+      <property role="IQ2ns" value="4158612253542199637" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="cards" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5q2m64Vw$mk" resolve="Card" />
+    </node>
+    <node concept="PrWs8" id="3AQmWYMY35j" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3AQmWYMY6tQ">
+    <property role="EcuMT" value="4158612253542213494" />
+    <property role="TrG5h" value="Game" />
+    <property role="34LRSv" value="game" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3AQmWYMY6tX" role="1TKVEi">
+      <property role="IQ2ns" value="4158612253542213501" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="players" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3AQmWYMXT0f" resolve="Player" />
+    </node>
+    <node concept="PrWs8" id="3AQmWYMY6tR" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

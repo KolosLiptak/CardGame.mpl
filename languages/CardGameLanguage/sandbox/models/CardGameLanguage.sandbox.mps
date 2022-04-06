@@ -7,6 +7,14 @@
   <imports />
   <registry>
     <language id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage">
+      <concept id="4158612253542158351" name="CardGameLanguage.structure.Player" flags="ng" index="2bgsJ0">
+        <child id="4158612253542158354" name="tokens" index="2bgsJt" />
+        <child id="4158612253542158352" name="piles" index="2bgsJv" />
+      </concept>
+      <concept id="4158612253542199634" name="CardGameLanguage.structure.Pile" flags="ng" index="2bjAEt" />
+      <concept id="6233642008867653013" name="CardGameLanguage.structure.Token" flags="ng" index="1H01RO">
+        <child id="4158612253542158317" name="value" index="2bgtgy" />
+      </concept>
       <concept id="6233642008867653012" name="CardGameLanguage.structure.Card" flags="ng" index="1H01RP">
         <child id="6233642008867693959" name="values" index="1H0bRA" />
       </concept>
@@ -277,6 +285,51 @@
       </node>
       <node concept="1H09ok" id="4wpaAHE4NOP" role="1H0bzb">
         <property role="1H09om" value="5" />
+      </node>
+    </node>
+  </node>
+  <node concept="2bgsJ0" id="3AQmWYMY08i">
+    <property role="TrG5h" value="MyPlayer" />
+    <node concept="2bjAEt" id="3AQmWYMY6tC" role="2bgsJv">
+      <property role="TrG5h" value="Drawpile" />
+    </node>
+    <node concept="2bjAEt" id="3AQmWYMY6tE" role="2bgsJv">
+      <property role="TrG5h" value="DiscardPile" />
+    </node>
+    <node concept="2bjAEt" id="3AQmWYMY6tH" role="2bgsJv">
+      <property role="TrG5h" value="Hand" />
+    </node>
+    <node concept="2bjAEt" id="3AQmWYMY6tL" role="2bgsJv">
+      <property role="TrG5h" value="Board" />
+    </node>
+    <node concept="1H01RO" id="3AQmWYMY34s" role="2bgsJt">
+      <node concept="1H0bz6" id="3AQmWYMY34t" role="2bgtgy">
+        <node concept="1H09on" id="3AQmWYMY34$" role="1H0bz9">
+          <property role="1H09oo" value="Health" />
+        </node>
+        <node concept="1H09ok" id="3AQmWYMY34B" role="1H0bzb">
+          <property role="1H09om" value="20" />
+        </node>
+      </node>
+    </node>
+    <node concept="1H01RO" id="3AQmWYMY34E" role="2bgsJt">
+      <node concept="1H0bz6" id="3AQmWYMY34F" role="2bgtgy">
+        <node concept="1H09on" id="3AQmWYMY34Q" role="1H0bz9">
+          <property role="1H09oo" value="Mana" />
+        </node>
+        <node concept="1H09ok" id="3AQmWYMY34T" role="1H0bzb">
+          <property role="1H09om" value="5" />
+        </node>
+      </node>
+    </node>
+    <node concept="1H01RO" id="3AQmWYMY34W" role="2bgsJt">
+      <node concept="1H0bz6" id="3AQmWYMY34X" role="2bgtgy">
+        <node concept="1H09on" id="3AQmWYMY35c" role="1H0bz9">
+          <property role="1H09oo" value="ActivePlayer" />
+        </node>
+        <node concept="1H09ok" id="3AQmWYMY35f" role="1H0bzb">
+          <property role="1H09om" value="1" />
+        </node>
       </node>
     </node>
   </node>

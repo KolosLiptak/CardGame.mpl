@@ -12,6 +12,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Card;
   private ConceptPresentation props_Deck;
   private ConceptPresentation props_IntValue;
+  private ConceptPresentation props_Pile;
+  private ConceptPresentation props_Player;
   private ConceptPresentation props_Property;
   private ConceptPresentation props_StringValue;
   private ConceptPresentation props_Token;
@@ -43,6 +45,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IntValue = cpb.create();
         }
         return props_IntValue;
+      case LanguageConceptSwitch.Pile:
+        if (props_Pile == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Pile = cpb.create();
+        }
+        return props_Pile;
+      case LanguageConceptSwitch.Player:
+        if (props_Player == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Player = cpb.create();
+        }
+        return props_Player;
       case LanguageConceptSwitch.Property:
         if (props_Property == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -60,7 +76,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Token:
         if (props_Token == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Token");
+          cpb.rawPresentation("token");
           props_Token = cpb.create();
         }
         return props_Token;

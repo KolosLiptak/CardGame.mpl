@@ -16,6 +16,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCard = createDescriptorForCard();
   /*package*/ final ConceptDescriptor myConceptDeck = createDescriptorForDeck();
   /*package*/ final ConceptDescriptor myConceptIntValue = createDescriptorForIntValue();
+  /*package*/ final ConceptDescriptor myConceptPile = createDescriptorForPile();
+  /*package*/ final ConceptDescriptor myConceptPlayer = createDescriptorForPlayer();
   /*package*/ final ConceptDescriptor myConceptProperty = createDescriptorForProperty();
   /*package*/ final ConceptDescriptor myConceptStringValue = createDescriptorForStringValue();
   /*package*/ final ConceptDescriptor myConceptToken = createDescriptorForToken();
@@ -34,7 +36,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCard, myConceptDeck, myConceptIntValue, myConceptProperty, myConceptStringValue, myConceptToken, myConceptValue);
+    return Arrays.asList(myConceptCard, myConceptDeck, myConceptIntValue, myConceptPile, myConceptPlayer, myConceptProperty, myConceptStringValue, myConceptToken, myConceptValue);
   }
 
   @Override
@@ -47,6 +49,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDeck;
       case LanguageConceptSwitch.IntValue:
         return myConceptIntValue;
+      case LanguageConceptSwitch.Pile:
+        return myConceptPile;
+      case LanguageConceptSwitch.Player:
+        return myConceptPlayer;
       case LanguageConceptSwitch.Property:
         return myConceptProperty;
       case LanguageConceptSwitch.StringValue:
@@ -96,6 +102,27 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Number");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForPile() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Pile", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/4158612253542199634");
+    b.version(3);
+    b.aggregate("cards", 0x39b65bcfb2f83155L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824594L).optional(true).ordered(true).multiple(true).origin("4158612253542199637").done();
+    b.alias("pile");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPlayer() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Player", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f7900fL);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/4158612253542158351");
+    b.version(3);
+    b.aggregate("piles", 0x39b65bcfb2f79010L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L).optional(true).ordered(true).multiple(true).origin("4158612253542158352").done();
+    b.aggregate("tokens", 0x39b65bcfb2f79012L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824595L).optional(true).ordered(true).multiple(true).origin("4158612253542158354").done();
+    b.alias("player");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProperty() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Property", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L);
     b.class_(false, false, false);
@@ -122,6 +149,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/6233642008867653013");
     b.version(3);
+    b.aggregate("value", 0x39b65bcfb2f78fedL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L).optional(false).ordered(true).multiple(false).origin("4158612253542158317").done();
+    b.alias("token");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForValue() {

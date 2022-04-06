@@ -24,9 +24,13 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 2:
         return Collections.<ConceptEditor>singletonList(new IntValue_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new Property_Editor());
+        return Collections.<ConceptEditor>singletonList(new Pile_Editor());
       case 4:
+        return Collections.<ConceptEditor>singletonList(new Property_Editor());
+      case 5:
         return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
+      case 6:
+        return Collections.<ConceptEditor>singletonList(new Token_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -34,5 +38,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824594L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b8467c7L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82ce75L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82ce76L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824594L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b8467c7L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82ce75L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82ce76L), MetaIdFactory.conceptId(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824595L)).seal();
 }
