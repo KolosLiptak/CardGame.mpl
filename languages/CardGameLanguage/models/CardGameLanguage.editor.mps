@@ -40,8 +40,14 @@
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="24kQdi" id="5q2m64VwIBh">
+    <property role="3GE5qa" value="Card" />
     <ref role="1XX52x" to="ssdz:5q2m64VwI2B" resolve="Property" />
     <node concept="3EZMnI" id="5q2m64VwIBj" role="2wV5jI">
       <node concept="3F1sOY" id="5q2m64VwIBq" role="3EZMnx">
@@ -54,6 +60,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5q2m64VwPIp">
+    <property role="3GE5qa" value="Card" />
     <ref role="1XX52x" to="ssdz:5q2m64VwGTQ" resolve="StringValue" />
     <node concept="3EZMnI" id="5q2m64VwPIr" role="2wV5jI">
       <node concept="3F0A7n" id="5q2m64VwPIy" role="3EZMnx">
@@ -63,6 +70,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5q2m64VwPIG">
+    <property role="3GE5qa" value="Card" />
     <ref role="1XX52x" to="ssdz:5q2m64VwGTP" resolve="IntValue" />
     <node concept="3EZMnI" id="5q2m64VwPII" role="2wV5jI">
       <node concept="3F0A7n" id="5q2m64VwPIP" role="3EZMnx">
@@ -72,6 +80,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5q2m64VwT8D">
+    <property role="3GE5qa" value="Card" />
     <ref role="1XX52x" to="ssdz:5q2m64Vw$mk" resolve="Card" />
     <node concept="3EZMnI" id="5q2m64VxGfm" role="2wV5jI">
       <node concept="2iRkQZ" id="5q2m64VxGfn" role="2iSdaV" />
@@ -96,6 +105,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5q2m64VxooL">
+    <property role="3GE5qa" value="Card" />
     <ref role="1XX52x" to="ssdz:5q2m64Vx6v7" resolve="Deck" />
     <node concept="3EZMnI" id="5q2m64VxooN" role="2wV5jI">
       <node concept="3F0A7n" id="5q2m64VxooU" role="3EZMnx">
@@ -109,6 +119,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3AQmWYMXSZQ">
+    <property role="3GE5qa" value="Player" />
     <ref role="1XX52x" to="ssdz:5q2m64Vw$ml" resolve="Token" />
     <node concept="3EZMnI" id="3AQmWYMXSZS" role="2wV5jI">
       <node concept="3F1sOY" id="3AQmWYMXT0c" role="3EZMnx">
@@ -118,6 +129,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3AQmWYMY35u">
+    <property role="3GE5qa" value="Player" />
     <ref role="1XX52x" to="ssdz:3AQmWYMY35i" resolve="Pile" />
     <node concept="3EZMnI" id="3AQmWYMY35w" role="2wV5jI">
       <node concept="3F0A7n" id="3AQmWYMY35B" role="3EZMnx">

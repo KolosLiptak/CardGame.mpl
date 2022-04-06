@@ -8,12 +8,58 @@
   <registry>
     <language id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage">
       <concept id="4158612253542158351" name="CardGameLanguage.structure.Player" flags="ng" index="2bgsJ0">
-        <child id="4158612253542158354" name="tokens" index="2bgsJt" />
         <child id="4158612253542158352" name="piles" index="2bgsJv" />
       </concept>
+      <concept id="4158612253542213494" name="CardGameLanguage.structure.Game" flags="ng" index="2bjzMT">
+        <reference id="5997851955997805208" name="deck" index="BBiKb" />
+        <child id="4158612253542213501" name="players" index="2bjzMM" />
+        <child id="2757081406054186073" name="phases" index="16WEaR" />
+      </concept>
       <concept id="4158612253542199634" name="CardGameLanguage.structure.Pile" flags="ng" index="2bjAEt" />
-      <concept id="6233642008867653013" name="CardGameLanguage.structure.Token" flags="ng" index="1H01RO">
-        <child id="4158612253542158317" name="value" index="2bgtgy" />
+      <concept id="2757081406054186070" name="CardGameLanguage.structure.Phase" flags="ng" index="16WEaS">
+        <child id="2757081406054552083" name="actions" index="16X4NX" />
+        <child id="2757081406054582902" name="commands" index="16Xdio" />
+      </concept>
+      <concept id="2757081406054552085" name="CardGameLanguage.structure.Move" flags="ng" index="16X4NV">
+        <property id="2757081406054560050" name="number" index="16X6Zs" />
+        <reference id="2757081406054552088" name="to" index="16X4NQ" />
+        <reference id="2757081406054552086" name="from" index="16X4NS" />
+      </concept>
+      <concept id="2757081406054557952" name="CardGameLanguage.structure.Shuffle" flags="ng" index="16X7vI">
+        <reference id="2757081406054557953" name="deck" index="16X7vJ" />
+      </concept>
+      <concept id="2757081406054578284" name="CardGameLanguage.structure.MoveSelected" flags="ng" index="16Xaq2">
+        <child id="2757081406054637381" name="to" index="16YS6F" />
+        <child id="2757081406054637378" name="from" index="16YS6G" />
+        <child id="2757081406054637376" name="selectedCard" index="16YS6I" />
+      </concept>
+      <concept id="2757081406054582858" name="CardGameLanguage.structure.While" flags="ng" index="16Xdi$">
+        <child id="2757081406054582892" name="body" index="16Xdi2" />
+        <child id="2757081406054582886" name="condition" index="16Xdi8" />
+      </concept>
+      <concept id="2757081406054582857" name="CardGameLanguage.structure.Empty" flags="ng" index="16XdiB">
+        <reference id="2757081406054601738" name="pile" index="16YKF$" />
+      </concept>
+      <concept id="2757081406054582845" name="CardGameLanguage.structure.Not" flags="ng" index="16Xdjj">
+        <child id="2757081406054582855" name="expression" index="16XdiD" />
+      </concept>
+      <concept id="2757081406054604739" name="CardGameLanguage.structure.Or" flags="ng" index="16YK4H" />
+      <concept id="2757081406054604732" name="CardGameLanguage.structure.Operator" flags="ng" index="16YK5i">
+        <child id="2757081406054604735" name="right" index="16YK5h" />
+        <child id="2757081406054604733" name="left" index="16YK5j" />
+      </concept>
+      <concept id="2757081406054608102" name="CardGameLanguage.structure.Turn" flags="ng" index="16YN88">
+        <child id="2757081406054608103" name="actions" index="16YN89" />
+      </concept>
+      <concept id="2757081406054618520" name="CardGameLanguage.structure.Optional" flags="ng" index="16YOHQ">
+        <child id="2757081406054618521" name="action" index="16YOHR" />
+      </concept>
+      <concept id="2757081406054618519" name="CardGameLanguage.structure.Kamu" flags="ng" index="16YOHT" />
+      <concept id="2757081406054633340" name="CardGameLanguage.structure.SelectCard" flags="ng" index="16YT6i">
+        <reference id="2757081406054633341" name="card" index="16YT6j" />
+      </concept>
+      <concept id="2757081406054633337" name="CardGameLanguage.structure.SelectPile" flags="ng" index="16YT6n">
+        <reference id="2757081406054633338" name="pile" index="16YT6k" />
       </concept>
       <concept id="6233642008867653012" name="CardGameLanguage.structure.Card" flags="ng" index="1H01RP">
         <child id="6233642008867693959" name="values" index="1H0bRA" />
@@ -38,25 +84,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="1H01RP" id="5q2m64VwHn4">
-    <property role="TrG5h" value="My New Card" />
-    <node concept="1H0bz6" id="6$zIwF2q0Fh" role="1H0bRA">
-      <node concept="1H09on" id="6$zIwF2q0Fi" role="1H0bz9">
-        <property role="1H09oo" value="value1" />
-      </node>
-      <node concept="1H09ok" id="6$zIwF2q0Fn" role="1H0bzb">
-        <property role="1H09om" value="5" />
-      </node>
-    </node>
-    <node concept="1H0bz6" id="6$zIwF2q0Fq" role="1H0bRA">
-      <node concept="1H09on" id="6$zIwF2q0Fr" role="1H0bz9">
-        <property role="1H09oo" value="value2" />
-      </node>
-      <node concept="1H09on" id="6$zIwF2q0Fz" role="1H0bzb">
-        <property role="1H09oo" value="text" />
-      </node>
-    </node>
-  </node>
   <node concept="1H1zYA" id="5q2m64VxygR">
     <property role="TrG5h" value="FranciaKártya" />
     <node concept="1H01RP" id="5q2m64VxygS" role="1H1zYF">
@@ -258,77 +285,73 @@
       </node>
     </node>
   </node>
-  <node concept="1H01RP" id="6$zIwF2q0FA">
-    <property role="TrG5h" value="Card" />
-    <node concept="1H0bz6" id="6$zIwF2q0FB" role="1H0bRA">
-      <node concept="1H09on" id="6$zIwF2q0FH" role="1H0bz9">
-        <property role="1H09oo" value="Szín" />
-      </node>
-      <node concept="1H09on" id="6$zIwF2q0FK" role="1H0bzb">
-        <property role="1H09oo" value="piros" />
-      </node>
-    </node>
-    <node concept="1H0bz6" id="6$zIwF2q0FN" role="1H0bRA">
-      <node concept="1H09on" id="6$zIwF2q0FW" role="1H0bz9">
-        <property role="1H09oo" value="szám" />
-      </node>
-      <node concept="1H09ok" id="6$zIwF2q0FZ" role="1H0bzb">
-        <property role="1H09om" value="6" />
+  <node concept="2bjzMT" id="5cWDDdOCz9m">
+    <property role="TrG5h" value="Kamu" />
+    <ref role="BBiKb" node="5q2m64VxygR" resolve="FranciaKártya" />
+    <node concept="2bgsJ0" id="5cWDDdOCz9n" role="2bjzMM">
+      <property role="TrG5h" value="Jim" />
+      <node concept="2bjAEt" id="5cWDDdOCzyh" role="2bgsJv">
+        <property role="TrG5h" value="JimHand" />
       </node>
     </node>
-  </node>
-  <node concept="1H01RP" id="4wpaAHE4NOF">
-    <property role="TrG5h" value="Card" />
-    <node concept="1H0bz6" id="4wpaAHE4NOG" role="1H0bRA">
-      <node concept="1H09on" id="4wpaAHE4NOM" role="1H0bz9">
-        <property role="1H09oo" value="card" />
-      </node>
-      <node concept="1H09ok" id="4wpaAHE4NOP" role="1H0bzb">
-        <property role="1H09om" value="5" />
+    <node concept="2bgsJ0" id="5cWDDdOCzyr" role="2bjzMM">
+      <property role="TrG5h" value="Bob" />
+      <node concept="2bjAEt" id="5cWDDdOCzyv" role="2bgsJv">
+        <property role="TrG5h" value="BobHand" />
       </node>
     </node>
-  </node>
-  <node concept="2bgsJ0" id="3AQmWYMY08i">
-    <property role="TrG5h" value="MyPlayer" />
-    <node concept="2bjAEt" id="3AQmWYMY6tC" role="2bgsJv">
-      <property role="TrG5h" value="Drawpile" />
-    </node>
-    <node concept="2bjAEt" id="3AQmWYMY6tE" role="2bgsJv">
-      <property role="TrG5h" value="DiscardPile" />
-    </node>
-    <node concept="2bjAEt" id="3AQmWYMY6tH" role="2bgsJv">
-      <property role="TrG5h" value="Hand" />
-    </node>
-    <node concept="2bjAEt" id="3AQmWYMY6tL" role="2bgsJv">
+    <node concept="2bgsJ0" id="2p37ITwHS76" role="2bjzMM">
       <property role="TrG5h" value="Board" />
-    </node>
-    <node concept="1H01RO" id="3AQmWYMY34s" role="2bgsJt">
-      <node concept="1H0bz6" id="3AQmWYMY34t" role="2bgtgy">
-        <node concept="1H09on" id="3AQmWYMY34$" role="1H0bz9">
-          <property role="1H09oo" value="Health" />
-        </node>
-        <node concept="1H09ok" id="3AQmWYMY34B" role="1H0bzb">
-          <property role="1H09om" value="20" />
-        </node>
+      <node concept="2bjAEt" id="2p37ITwHS7i" role="2bgsJv">
+        <property role="TrG5h" value="Board" />
       </node>
     </node>
-    <node concept="1H01RO" id="3AQmWYMY34E" role="2bgsJt">
-      <node concept="1H0bz6" id="3AQmWYMY34F" role="2bgtgy">
-        <node concept="1H09on" id="3AQmWYMY34Q" role="1H0bz9">
-          <property role="1H09oo" value="Mana" />
-        </node>
-        <node concept="1H09ok" id="3AQmWYMY34T" role="1H0bzb">
-          <property role="1H09om" value="5" />
-        </node>
+    <node concept="16WEaS" id="2p37ITwHP8g" role="16WEaR">
+      <property role="TrG5h" value="Setup" />
+      <node concept="16X7vI" id="2p37ITwHULd" role="16X4NX">
+        <ref role="16X7vJ" node="5q2m64VxygR" resolve="FranciaKártya" />
+      </node>
+      <node concept="16X4NV" id="2p37ITwHVkz" role="16X4NX">
+        <property role="16X6Zs" value="26" />
+        <ref role="16X4NS" node="5q2m64VxygR" resolve="FranciaKártya" />
+        <ref role="16X4NQ" node="5cWDDdOCzyv" resolve="BobHand" />
+      </node>
+      <node concept="16X4NV" id="2p37ITwHVkF" role="16X4NX">
+        <property role="16X6Zs" value="26" />
+        <ref role="16X4NS" node="5q2m64VxygR" resolve="FranciaKártya" />
+        <ref role="16X4NQ" node="5cWDDdOCzyh" resolve="JimHand" />
       </node>
     </node>
-    <node concept="1H01RO" id="3AQmWYMY34W" role="2bgsJt">
-      <node concept="1H0bz6" id="3AQmWYMY34X" role="2bgtgy">
-        <node concept="1H09on" id="3AQmWYMY35c" role="1H0bz9">
-          <property role="1H09oo" value="ActivePlayer" />
+    <node concept="16WEaS" id="2p37ITwHVkK" role="16WEaR">
+      <property role="TrG5h" value="Main" />
+      <node concept="16Xdi$" id="2p37ITwI2N7" role="16Xdio">
+        <node concept="16YK4H" id="2p37ITwI2Nb" role="16Xdi8">
+          <node concept="16Xdjj" id="2p37ITwI2Nk" role="16YK5j">
+            <node concept="16XdiB" id="2p37ITwI2Nq" role="16XdiD">
+              <ref role="16YKF$" node="5cWDDdOCzyv" resolve="BobHand" />
+            </node>
+          </node>
+          <node concept="16Xdjj" id="2p37ITwI2Nt" role="16YK5h">
+            <node concept="16XdiB" id="2p37ITwI2Nz" role="16XdiD">
+              <ref role="16YKF$" node="5cWDDdOCzyh" resolve="JimHand" />
+            </node>
+          </node>
         </node>
-        <node concept="1H09ok" id="3AQmWYMY35f" role="1H0bzb">
-          <property role="1H09om" value="1" />
+        <node concept="16YN88" id="2p37ITwI3DB" role="16Xdi2">
+          <node concept="16YOHQ" id="2p37ITwI7ar" role="16YN89">
+            <node concept="16YOHT" id="2p37ITwI7ax" role="16YOHR" />
+          </node>
+          <node concept="16Xaq2" id="2p37ITwIaWb" role="16YN89">
+            <node concept="16YT6i" id="2p37ITwIaWd" role="16YS6I">
+              <ref role="16YT6j" node="5q2m64VxygS" resolve="KingOfHearts" />
+            </node>
+            <node concept="16YT6n" id="2p37ITwIaWf" role="16YS6G">
+              <ref role="16YT6k" node="5cWDDdOCzyv" resolve="BobHand" />
+            </node>
+            <node concept="16YT6n" id="2p37ITwIaWh" role="16YS6F">
+              <ref role="16YT6k" node="2p37ITwHS7i" resolve="Board" />
+            </node>
+          </node>
         </node>
       </node>
     </node>
