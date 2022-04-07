@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_And;
   private ConceptPresentation props_Card;
+  private ConceptPresentation props_Collection;
   private ConceptPresentation props_Command;
   private ConceptPresentation props_Deck;
   private ConceptPresentation props_Empty;
@@ -65,6 +66,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Card = cpb.create();
         }
         return props_Card;
+      case LanguageConceptSwitch.Collection:
+        if (props_Collection == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Collection = cpb.create();
+        }
+        return props_Collection;
       case LanguageConceptSwitch.Command:
         if (props_Command == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -152,7 +159,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Optional:
         if (props_Optional == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Optional");
+          cpb.rawPresentation("optional");
           props_Optional = cpb.create();
         }
         return props_Optional;
@@ -231,7 +238,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Token:
         if (props_Token == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("token");
+          cpb.presentationByName();
           props_Token = cpb.create();
         }
         return props_Token;

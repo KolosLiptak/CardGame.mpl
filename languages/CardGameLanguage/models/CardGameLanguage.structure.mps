@@ -70,13 +70,16 @@
     <property role="TrG5h" value="Token" />
     <property role="34LRSv" value="token" />
     <property role="3GE5qa" value="Player" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" node="570SQ3uuO23" resolve="Collection" />
     <node concept="1TJgyj" id="3AQmWYMXSZH" role="1TKVEi">
       <property role="IQ2ns" value="4158612253542158317" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5q2m64VwI2B" resolve="Property" />
+    </node>
+    <node concept="PrWs8" id="570SQ3uuB8k" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="5q2m64VwGTP">
@@ -137,7 +140,7 @@
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="deck" />
     <property role="3GE5qa" value="Card" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" node="570SQ3uuO23" resolve="Collection" />
     <node concept="PrWs8" id="5q2m64Vx6v8" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -156,20 +159,6 @@
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Player" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="1TJgyj" id="3AQmWYMXT0g" role="1TKVEi">
-      <property role="IQ2ns" value="4158612253542158352" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="piles" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="3AQmWYMY35i" resolve="Pile" />
-    </node>
-    <node concept="1TJgyj" id="3AQmWYMXT0i" role="1TKVEi">
-      <property role="IQ2ns" value="4158612253542158354" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="tokens" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="5q2m64Vw$ml" resolve="Token" />
-    </node>
     <node concept="PrWs8" id="3AQmWYMXT0l" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -177,6 +166,13 @@
       <property role="IQ2ns" value="2757081406054564310" />
       <property role="20kJfa" value="deck" />
       <ref role="20lvS9" node="5q2m64Vx6v7" resolve="Deck" />
+    </node>
+    <node concept="1TJgyj" id="570SQ3uuO29" role="1TKVEi">
+      <property role="IQ2ns" value="5890958317789593737" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="collections" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="570SQ3uuO23" resolve="Collection" />
     </node>
   </node>
   <node concept="1TIwiD" id="3AQmWYMY35i">
@@ -234,13 +230,6 @@
       <property role="20kJfa" value="actions" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2p37ITwHP8i" resolve="Action" />
-    </node>
-    <node concept="1TJgyj" id="2p37ITwHWDQ" role="1TKVEi">
-      <property role="IQ2ns" value="2757081406054582902" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="commands" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="2p37ITwHWDN" resolve="Command" />
     </node>
   </node>
   <node concept="1TIwiD" id="2p37ITwHP8i">
@@ -399,7 +388,7 @@
     <property role="3GE5qa" value="Logical" />
     <property role="TrG5h" value="Command" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" node="2p37ITwHP8i" resolve="Action" />
   </node>
   <node concept="1TIwiD" id="2p37ITwI1YW">
     <property role="EcuMT" value="2757081406054604732" />
@@ -460,12 +449,20 @@
     <property role="EcuMT" value="2757081406054618520" />
     <property role="3GE5qa" value="Logical" />
     <property role="TrG5h" value="Optional" />
+    <property role="34LRSv" value="optional" />
     <ref role="1TJDcQ" node="2p37ITwHP8i" resolve="Action" />
     <node concept="1TJgyj" id="2p37ITwI5mp" role="1TKVEi">
       <property role="IQ2ns" value="2757081406054618521" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="action" />
       <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2p37ITwHP8i" resolve="Action" />
+    </node>
+    <node concept="1TJgyj" id="570SQ3uxcio" role="1TKVEi">
+      <property role="IQ2ns" value="5890958317790217368" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="iftrue" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2p37ITwHP8i" resolve="Action" />
     </node>
   </node>
@@ -501,6 +498,13 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5q2m64Vw$mk" resolve="Card" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="570SQ3uuO23">
+    <property role="EcuMT" value="5890958317789593731" />
+    <property role="3GE5qa" value="Player" />
+    <property role="TrG5h" value="Collection" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
   </node>
 </model>
 

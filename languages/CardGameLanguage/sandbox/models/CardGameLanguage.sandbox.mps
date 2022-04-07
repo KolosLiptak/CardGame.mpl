@@ -8,7 +8,7 @@
   <registry>
     <language id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage">
       <concept id="4158612253542158351" name="CardGameLanguage.structure.Player" flags="ng" index="2bgsJ0">
-        <child id="4158612253542158352" name="piles" index="2bgsJv" />
+        <child id="5890958317789593737" name="collections" index="2fIUfD" />
       </concept>
       <concept id="4158612253542213494" name="CardGameLanguage.structure.Game" flags="ng" index="2bjzMT">
         <reference id="5997851955997805208" name="deck" index="BBiKb" />
@@ -18,7 +18,6 @@
       <concept id="4158612253542199634" name="CardGameLanguage.structure.Pile" flags="ng" index="2bjAEt" />
       <concept id="2757081406054186070" name="CardGameLanguage.structure.Phase" flags="ng" index="16WEaS">
         <child id="2757081406054552083" name="actions" index="16X4NX" />
-        <child id="2757081406054582902" name="commands" index="16Xdio" />
       </concept>
       <concept id="2757081406054552085" name="CardGameLanguage.structure.Move" flags="ng" index="16X4NV">
         <property id="2757081406054560050" name="number" index="16X6Zs" />
@@ -27,11 +26,6 @@
       </concept>
       <concept id="2757081406054557952" name="CardGameLanguage.structure.Shuffle" flags="ng" index="16X7vI">
         <reference id="2757081406054557953" name="deck" index="16X7vJ" />
-      </concept>
-      <concept id="2757081406054578284" name="CardGameLanguage.structure.MoveSelected" flags="ng" index="16Xaq2">
-        <child id="2757081406054637381" name="to" index="16YS6F" />
-        <child id="2757081406054637378" name="from" index="16YS6G" />
-        <child id="2757081406054637376" name="selectedCard" index="16YS6I" />
       </concept>
       <concept id="2757081406054582858" name="CardGameLanguage.structure.While" flags="ng" index="16Xdi$">
         <child id="2757081406054582892" name="body" index="16Xdi2" />
@@ -55,12 +49,6 @@
         <child id="2757081406054618521" name="action" index="16YOHR" />
       </concept>
       <concept id="2757081406054618519" name="CardGameLanguage.structure.Kamu" flags="ng" index="16YOHT" />
-      <concept id="2757081406054633340" name="CardGameLanguage.structure.SelectCard" flags="ng" index="16YT6i">
-        <reference id="2757081406054633341" name="card" index="16YT6j" />
-      </concept>
-      <concept id="2757081406054633337" name="CardGameLanguage.structure.SelectPile" flags="ng" index="16YT6n">
-        <reference id="2757081406054633338" name="pile" index="16YT6k" />
-      </concept>
       <concept id="6233642008867653012" name="CardGameLanguage.structure.Card" flags="ng" index="1H01RP">
         <child id="6233642008867693959" name="values" index="1H0bRA" />
       </concept>
@@ -288,22 +276,22 @@
   <node concept="2bjzMT" id="5cWDDdOCz9m">
     <property role="TrG5h" value="Kamu" />
     <ref role="BBiKb" node="5q2m64VxygR" resolve="FranciaKártya" />
-    <node concept="2bgsJ0" id="5cWDDdOCz9n" role="2bjzMM">
+    <node concept="2bgsJ0" id="570SQ3uuPat" role="2bjzMM">
       <property role="TrG5h" value="Jim" />
-      <node concept="2bjAEt" id="5cWDDdOCzyh" role="2bgsJv">
+      <node concept="2bjAEt" id="570SQ3uv0sr" role="2fIUfD">
         <property role="TrG5h" value="JimHand" />
       </node>
     </node>
-    <node concept="2bgsJ0" id="5cWDDdOCzyr" role="2bjzMM">
-      <property role="TrG5h" value="Bob" />
-      <node concept="2bjAEt" id="5cWDDdOCzyv" role="2bgsJv">
-        <property role="TrG5h" value="BobHand" />
+    <node concept="2bgsJ0" id="570SQ3uv0ta" role="2bjzMM">
+      <property role="TrG5h" value="Board" />
+      <node concept="2bjAEt" id="570SQ3uv0tg" role="2fIUfD">
+        <property role="TrG5h" value="Board" />
       </node>
     </node>
-    <node concept="2bgsJ0" id="2p37ITwHS76" role="2bjzMM">
-      <property role="TrG5h" value="Board" />
-      <node concept="2bjAEt" id="2p37ITwHS7i" role="2bgsJv">
-        <property role="TrG5h" value="Board" />
+    <node concept="2bgsJ0" id="570SQ3uv0sF" role="2bjzMM">
+      <property role="TrG5h" value="Bob" />
+      <node concept="2bjAEt" id="570SQ3uv0sN" role="2fIUfD">
+        <property role="TrG5h" value="BobHand" />
       </node>
     </node>
     <node concept="16WEaS" id="2p37ITwHP8g" role="16WEaR">
@@ -314,43 +302,32 @@
       <node concept="16X4NV" id="2p37ITwHVkz" role="16X4NX">
         <property role="16X6Zs" value="26" />
         <ref role="16X4NS" node="5q2m64VxygR" resolve="FranciaKártya" />
-        <ref role="16X4NQ" node="5cWDDdOCzyv" resolve="BobHand" />
+        <ref role="16X4NQ" node="570SQ3uv0sN" resolve="BobHand" />
       </node>
       <node concept="16X4NV" id="2p37ITwHVkF" role="16X4NX">
         <property role="16X6Zs" value="26" />
         <ref role="16X4NS" node="5q2m64VxygR" resolve="FranciaKártya" />
-        <ref role="16X4NQ" node="5cWDDdOCzyh" resolve="JimHand" />
+        <ref role="16X4NQ" node="570SQ3uv0sr" resolve="JimHand" />
       </node>
     </node>
-    <node concept="16WEaS" id="2p37ITwHVkK" role="16WEaR">
+    <node concept="16WEaS" id="570SQ3uw6jx" role="16WEaR">
       <property role="TrG5h" value="Main" />
-      <node concept="16Xdi$" id="2p37ITwI2N7" role="16Xdio">
-        <node concept="16YK4H" id="2p37ITwI2Nb" role="16Xdi8">
-          <node concept="16Xdjj" id="2p37ITwI2Nk" role="16YK5j">
-            <node concept="16XdiB" id="2p37ITwI2Nq" role="16XdiD">
-              <ref role="16YKF$" node="5cWDDdOCzyv" resolve="BobHand" />
+      <node concept="16Xdi$" id="570SQ3uwiMg" role="16X4NX">
+        <node concept="16YK4H" id="570SQ3uwiMk" role="16Xdi8">
+          <node concept="16Xdjj" id="570SQ3uwiMt" role="16YK5j">
+            <node concept="16XdiB" id="570SQ3uwiMz" role="16XdiD">
+              <ref role="16YKF$" node="570SQ3uv0sN" resolve="BobHand" />
             </node>
           </node>
-          <node concept="16Xdjj" id="2p37ITwI2Nt" role="16YK5h">
-            <node concept="16XdiB" id="2p37ITwI2Nz" role="16XdiD">
-              <ref role="16YKF$" node="5cWDDdOCzyh" resolve="JimHand" />
+          <node concept="16Xdjj" id="570SQ3uwiMA" role="16YK5h">
+            <node concept="16XdiB" id="570SQ3uwiMG" role="16XdiD">
+              <ref role="16YKF$" node="570SQ3uv0sr" resolve="JimHand" />
             </node>
           </node>
         </node>
-        <node concept="16YN88" id="2p37ITwI3DB" role="16Xdi2">
-          <node concept="16YOHQ" id="2p37ITwI7ar" role="16YN89">
-            <node concept="16YOHT" id="2p37ITwI7ax" role="16YOHR" />
-          </node>
-          <node concept="16Xaq2" id="2p37ITwIaWb" role="16YN89">
-            <node concept="16YT6i" id="2p37ITwIaWd" role="16YS6I">
-              <ref role="16YT6j" node="5q2m64VxygS" resolve="KingOfHearts" />
-            </node>
-            <node concept="16YT6n" id="2p37ITwIaWf" role="16YS6G">
-              <ref role="16YT6k" node="5cWDDdOCzyv" resolve="BobHand" />
-            </node>
-            <node concept="16YT6n" id="2p37ITwIaWh" role="16YS6F">
-              <ref role="16YT6k" node="2p37ITwHS7i" resolve="Board" />
-            </node>
+        <node concept="16YN88" id="570SQ3ux0mB" role="16Xdi2">
+          <node concept="16YOHQ" id="570SQ3uxoGc" role="16YN89">
+            <node concept="16YOHT" id="570SQ3uxoGg" role="16YOHR" />
           </node>
         </node>
       </node>
