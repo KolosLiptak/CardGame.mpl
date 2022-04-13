@@ -45,9 +45,6 @@
       <concept id="2757081406054608102" name="CardGameLanguage.structure.Turn" flags="ng" index="16YN88">
         <child id="2757081406054608103" name="actions" index="16YN89" />
       </concept>
-      <concept id="2757081406054618520" name="CardGameLanguage.structure.Optional" flags="ng" index="16YOHQ">
-        <child id="2757081406054618521" name="action" index="16YOHR" />
-      </concept>
       <concept id="2757081406054618519" name="CardGameLanguage.structure.Kamu" flags="ng" index="16YOHT" />
       <concept id="6233642008867653012" name="CardGameLanguage.structure.Card" flags="ng" index="1H01RP">
         <child id="6233642008867693959" name="values" index="1H0bRA" />
@@ -326,9 +323,18 @@
           </node>
         </node>
         <node concept="16YN88" id="570SQ3ux0mB" role="16Xdi2">
-          <node concept="16YOHQ" id="570SQ3uxoGc" role="16YN89">
-            <node concept="16YOHT" id="570SQ3uxoGg" role="16YOHR" />
+          <node concept="16X4NV" id="6POwaXZkoDN" role="16YN89">
+            <property role="16X6Zs" value="1" />
+            <ref role="16X4NS" node="570SQ3uv0sN" resolve="BobHand" />
+            <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
           </node>
+          <node concept="16YOHT" id="6POwaXZkoDS" role="16YN89" />
+          <node concept="16X4NV" id="6POwaXZkoE0" role="16YN89">
+            <property role="16X6Zs" value="1" />
+            <ref role="16X4NS" node="570SQ3uv0sr" resolve="JimHand" />
+            <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
+          </node>
+          <node concept="16YOHT" id="6POwaXZkoEa" role="16YN89" />
         </node>
       </node>
     </node>
