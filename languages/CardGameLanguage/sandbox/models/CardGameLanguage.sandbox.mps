@@ -359,7 +359,7 @@
                 <ref role="3vQggr" node="_fMBrmAr5_" resolve="kamuinput" />
               </node>
               <node concept="1H09on" id="2kniA9zWF6o" role="16TKX$">
-                <property role="1H09oo" value="true" />
+                <property role="1H09oo" value="1" />
               </node>
             </node>
           </node>
@@ -406,12 +406,18 @@
       </node>
     </node>
     <node concept="3vQggE" id="_fMBrmAr5_" role="3vQggh">
-      <property role="TrG5h" value="kamuinput" />
+      <property role="TrG5h" value="userinput" />
     </node>
     <node concept="1H0bz6" id="2kniA9zVre4" role="16Wb_R">
       <property role="TrG5h" value="Counter" />
       <node concept="1H09ok" id="2kniA9zVre8" role="1H0bzb">
         <property role="1H09om" value="0" />
+      </node>
+    </node>
+    <node concept="1H0bz6" id="kX00LFTLM9" role="16Wb_R">
+      <property role="TrG5h" value="Kamu" />
+      <node concept="1H09on" id="kX00LFTLMf" role="1H0bzb">
+        <property role="1H09oo" value="kamu" />
       </node>
     </node>
   </node>
