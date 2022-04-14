@@ -71,8 +71,8 @@
     <property role="3GE5qa" value="Card" />
     <ref role="1XX52x" to="ssdz:5q2m64VwI2B" resolve="Property" />
     <node concept="3EZMnI" id="5q2m64VwIBj" role="2wV5jI">
-      <node concept="3F1sOY" id="5q2m64VwIBq" role="3EZMnx">
-        <ref role="1NtTu8" to="ssdz:5q2m64VwI2C" resolve="propertyName" />
+      <node concept="3F0A7n" id="2kniA9zV9Ut" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="3F1sOY" id="5q2m64VwIBw" role="3EZMnx">
         <ref role="1NtTu8" to="ssdz:5q2m64VwI2E" resolve="propertyValue" />
@@ -316,7 +316,11 @@
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
           </node>
         </node>
+        <node concept="ljvvj" id="2kniA9zXnnE" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
+      <node concept="3F0ifn" id="2kniA9zXno7" role="3EZMnx" />
       <node concept="l2Vlx" id="570SQ3uujyS" role="2iSdaV" />
     </node>
   </node>
@@ -573,22 +577,6 @@
       <node concept="l2Vlx" id="2kniA9zSkh_" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="2kniA9zUhzZ">
-    <property role="3GE5qa" value="Operators" />
-    <ref role="1XX52x" to="ssdz:2kniA9zTHg6" resolve="Comparator" />
-    <node concept="3EZMnI" id="2kniA9zUzvV" role="2wV5jI">
-      <node concept="3F1sOY" id="2kniA9zUzw1" role="3EZMnx">
-        <ref role="1NtTu8" to="ssdz:2kniA9zUhzN" resolve="left" />
-      </node>
-      <node concept="PMmxH" id="2kniA9zUzw7" role="3EZMnx">
-        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
-      </node>
-      <node concept="3F1sOY" id="2kniA9zUzwe" role="3EZMnx">
-        <ref role="1NtTu8" to="ssdz:2kniA9zUhzP" resolve="right" />
-      </node>
-      <node concept="2iRfu4" id="2kniA9zUzvW" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="2kniA9zUQ24">
     <property role="3GE5qa" value="Action" />
     <ref role="1XX52x" to="ssdz:2kniA9zUOBr" resolve="SetValue" />
@@ -597,9 +585,64 @@
         <property role="3F0ifm" value="set value" />
       </node>
       <node concept="3F1sOY" id="2kniA9zUQ2n" role="3EZMnx">
-        <ref role="1NtTu8" to="ssdz:2kniA9zUOBs" resolve="expression" />
+        <ref role="1NtTu8" to="ssdz:2kniA9zVJfI" resolve="left" />
       </node>
-      <node concept="2iRfu4" id="2kniA9zUQ29" role="2iSdaV" />
+      <node concept="3F0ifn" id="2kniA9zVJfW" role="3EZMnx">
+        <property role="3F0ifm" value="to" />
+      </node>
+      <node concept="3F1sOY" id="2kniA9zVJg6" role="3EZMnx">
+        <ref role="1NtTu8" to="ssdz:2kniA9zVJfK" resolve="right" />
+        <node concept="ljvvj" id="2kniA9zXECw" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2kniA9zXECD" role="3EZMnx" />
+      <node concept="l2Vlx" id="2kniA9zXnol" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2kniA9zVreL">
+    <property role="3GE5qa" value="Card" />
+    <ref role="1XX52x" to="ssdz:2kniA9zV6Xg" resolve="PropertyReference" />
+    <node concept="1iCGBv" id="2kniA9zVreN" role="2wV5jI">
+      <ref role="1NtTu8" to="ssdz:2kniA9zV6Xh" resolve="property" />
+      <node concept="1sVBvm" id="2kniA9zVreP" role="1sWHZn">
+        <node concept="3F0A7n" id="2kniA9zVreW" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2kniA9zW4kg">
+    <property role="3GE5qa" value="Operators" />
+    <ref role="1XX52x" to="ssdz:2kniA9zW4k3" resolve="Comparator" />
+    <node concept="3EZMnI" id="2kniA9zW4ki" role="2wV5jI">
+      <node concept="3F1sOY" id="2kniA9zW4kp" role="3EZMnx">
+        <ref role="1NtTu8" to="ssdz:2kniA9zW4k4" resolve="left" />
+      </node>
+      <node concept="PMmxH" id="2kniA9zW4kv" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="3F1sOY" id="2kniA9zW4kA" role="3EZMnx">
+        <ref role="1NtTu8" to="ssdz:2kniA9zW4k6" resolve="right" />
+      </node>
+      <node concept="2iRfu4" id="2kniA9zW4kl" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2kniA9zX2SJ">
+    <property role="3GE5qa" value="Card" />
+    <ref role="1XX52x" to="ssdz:2kniA9zX2S_" resolve="PropertyReferenceArg" />
+    <node concept="3EZMnI" id="2kniA9zX2SL" role="2wV5jI">
+      <node concept="1iCGBv" id="2kniA9zX2SW" role="3EZMnx">
+        <ref role="1NtTu8" to="ssdz:2kniA9zX2SA" resolve="property" />
+        <node concept="1sVBvm" id="2kniA9zX2SY" role="1sWHZn">
+          <node concept="3F0A7n" id="2kniA9zX2T5" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="2iRfu4" id="2kniA9zX2SO" role="2iSdaV" />
     </node>
   </node>
 </model>

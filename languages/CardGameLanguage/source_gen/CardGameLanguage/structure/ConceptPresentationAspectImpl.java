@@ -11,6 +11,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_And;
+  private ConceptPresentation props_Argument;
   private ConceptPresentation props_Card;
   private ConceptPresentation props_CardReference;
   private ConceptPresentation props_Collection;
@@ -38,6 +39,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Player;
   private ConceptPresentation props_Property;
   private ConceptPresentation props_PropertyReference;
+  private ConceptPresentation props_PropertyReferenceArg;
   private ConceptPresentation props_Select;
   private ConceptPresentation props_SelectCard;
   private ConceptPresentation props_SelectPile;
@@ -67,6 +69,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_And = cpb.create();
         }
         return props_And;
+      case LanguageConceptSwitch.Argument:
+        if (props_Argument == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Argument = cpb.create();
+        }
+        return props_Argument;
       case LanguageConceptSwitch.Card:
         if (props_Card == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -245,7 +253,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Property:
         if (props_Property == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("property");
+          cpb.presentationByName();
           props_Property = cpb.create();
         }
         return props_Property;
@@ -256,6 +264,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PropertyReference = cpb.create();
         }
         return props_PropertyReference;
+      case LanguageConceptSwitch.PropertyReferenceArg:
+        if (props_PropertyReferenceArg == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f42e25L, 0x25174a6263f42e26L, "property", "", "");
+          props_PropertyReferenceArg = cpb.create();
+        }
+        return props_PropertyReferenceArg;
       case LanguageConceptSwitch.Select:
         if (props_Select == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

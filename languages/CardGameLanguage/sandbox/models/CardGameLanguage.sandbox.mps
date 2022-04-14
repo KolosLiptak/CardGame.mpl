@@ -7,7 +7,14 @@
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1068431790191" name="jetbrains.mps.baseLanguage.structure.Expression" flags="nn" index="33vP2n" />
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
+      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
     </language>
     <language id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage">
       <concept id="4158612253542158351" name="CardGameLanguage.structure.Player" flags="ng" index="2bgsJ0">
@@ -26,9 +33,12 @@
         <child id="2672686690310379870" name="true" index="16MxcW" />
         <child id="2672686690310379868" name="condition" index="16MxcY" />
       </concept>
-      <concept id="2672686690311001094" name="CardGameLanguage.structure.Comparator" flags="ng" index="16WpT$">
-        <child id="2672686690311149811" name="left" index="16Z_ah" />
-        <child id="2672686690311149813" name="right" index="16Z_an" />
+      <concept id="2672686690311876133" name="CardGameLanguage.structure.PropertyReferenceArg" flags="ng" index="16SQh7">
+        <reference id="2672686690311876134" name="property" index="16SQh4" />
+      </concept>
+      <concept id="2672686690311619843" name="CardGameLanguage.structure.Comparator" flags="ng" index="16TKXx">
+        <child id="2672686690311619846" name="right" index="16TKX$" />
+        <child id="2672686690311619844" name="left" index="16TKXA" />
       </concept>
       <concept id="2757081406054186070" name="CardGameLanguage.structure.Phase" flags="ng" index="16WEaS">
         <child id="2757081406054552083" name="actions" index="16X4NX" />
@@ -63,11 +73,15 @@
         <child id="2757081406054604735" name="right" index="16YK5h" />
         <child id="2757081406054604733" name="left" index="16YK5j" />
       </concept>
+      <concept id="2672686690311368528" name="CardGameLanguage.structure.PropertyReference" flags="ng" index="16YMkM">
+        <reference id="2672686690311368529" name="property" index="16YMkN" />
+      </concept>
       <concept id="2757081406054608102" name="CardGameLanguage.structure.Turn" flags="ng" index="16YN88">
         <child id="2757081406054608103" name="actions" index="16YN89" />
       </concept>
       <concept id="2672686690311293403" name="CardGameLanguage.structure.SetValue" flags="ng" index="16Z0eT">
-        <child id="2672686690311293404" name="expression" index="16Z0eY" />
+        <child id="2672686690311533550" name="left" index="16YrAc" />
+        <child id="2672686690311533552" name="right" index="16YrAi" />
       </concept>
       <concept id="670977481256652396" name="CardGameLanguage.structure.InputFieldReference" flags="ng" index="3vQggq">
         <reference id="670977481256652397" name="inputfield" index="3vQggr" />
@@ -98,71 +112,18 @@
   </registry>
   <node concept="1H1zYA" id="5q2m64VxygR">
     <property role="TrG5h" value="FranciaKártya" />
-    <node concept="1H01RP" id="5q2m64VxygS" role="1H1zYF">
+    <node concept="1H01RP" id="2kniA9zV9U3" role="1H1zYF">
       <property role="TrG5h" value="KingOfHearts" />
-      <node concept="1H0bz6" id="5q2m64Vxyhd" role="1H0bRA">
-        <node concept="1H09on" id="5q2m64Vxyhe" role="1H0bz9">
-          <property role="1H09oo" value="Suit" />
+      <node concept="1H0bz6" id="2kniA9zVrdO" role="1H0bRA">
+        <property role="TrG5h" value="Value" />
+        <node concept="1H09ok" id="2kniA9zVrdZ" role="1H0bzb">
+          <property role="1H09om" value="13" />
         </node>
-        <node concept="1H09on" id="5q2m64Vxyhm" role="1H0bzb">
+      </node>
+      <node concept="1H0bz6" id="2kniA9zVrdt" role="1H0bRA">
+        <property role="TrG5h" value="Suit" />
+        <node concept="1H09on" id="2kniA9zVrdx" role="1H0bzb">
           <property role="1H09oo" value="Hearts" />
-        </node>
-      </node>
-      <node concept="1H0bz6" id="5q2m64VxygU" role="1H0bRA">
-        <node concept="1H09on" id="5q2m64VxygV" role="1H0bz9">
-          <property role="1H09oo" value="Value" />
-        </node>
-        <node concept="1H09on" id="5q2m64Vxyh0" role="1H0bzb">
-          <property role="1H09oo" value="K" />
-        </node>
-      </node>
-    </node>
-    <node concept="1H01RP" id="5q2m64Vxyhp" role="1H1zYF">
-      <property role="TrG5h" value="QueenOfHearts" />
-      <node concept="1H0bz6" id="5q2m64VxyhF" role="1H0bRA">
-        <node concept="1H09on" id="5q2m64VxyhG" role="1H0bz9">
-          <property role="1H09oo" value="Suit" />
-        </node>
-        <node concept="1H09on" id="5q2m64VxyhO" role="1H0bzb">
-          <property role="1H09oo" value="Hearts" />
-        </node>
-      </node>
-      <node concept="1H0bz6" id="5q2m64Vxyhy" role="1H0bRA">
-        <node concept="1H09on" id="5q2m64Vxyhz" role="1H0bz9">
-          <property role="1H09oo" value="Value" />
-        </node>
-        <node concept="1H09on" id="5q2m64VxyhC" role="1H0bzb">
-          <property role="1H09oo" value="Q" />
-        </node>
-      </node>
-    </node>
-    <node concept="1H01RP" id="5q2m64VxyhR" role="1H1zYF">
-      <property role="TrG5h" value="SevenOfClubs" />
-      <node concept="1H0bz6" id="5q2m64Vxyj8" role="1H0bRA">
-        <node concept="1H09on" id="5q2m64Vxyj9" role="1H0bz9">
-          <property role="1H09oo" value="Suit" />
-        </node>
-        <node concept="1H09on" id="5q2m64Vxyjh" role="1H0bzb">
-          <property role="1H09oo" value="Clubs" />
-        </node>
-      </node>
-      <node concept="1H0bz6" id="5q2m64Vxyi7" role="1H0bRA">
-        <node concept="1H09on" id="5q2m64Vxyid" role="1H0bz9">
-          <property role="1H09oo" value="Value" />
-        </node>
-        <node concept="1H09ok" id="5q2m64Vxyig" role="1H0bzb">
-          <property role="1H09om" value="7" />
-        </node>
-      </node>
-    </node>
-    <node concept="1H01RP" id="6$zIwF2q0G2" role="1H1zYF">
-      <property role="TrG5h" value="SevenOfClubs" />
-      <node concept="1H0bz6" id="6$zIwF2q0Gp" role="1H0bRA">
-        <node concept="1H09on" id="6$zIwF2q0Gq" role="1H0bz9">
-          <property role="1H09oo" value="Suit" />
-        </node>
-        <node concept="1H09on" id="6$zIwF2q0Gv" role="1H0bzb">
-          <property role="1H09oo" value="Clubs" />
         </node>
       </node>
     </node>
@@ -333,9 +294,6 @@
         <ref role="16X4NS" node="5q2m64VxygR" resolve="FranciaKártya" />
         <ref role="16X4NQ" node="570SQ3uv0sr" resolve="JimHand" />
       </node>
-      <node concept="16Z0eT" id="2kniA9zV6V2" role="16X4NX">
-        <node concept="33vP2n" id="2kniA9zV8tc" role="16Z0eY" />
-      </node>
     </node>
     <node concept="16WEaS" id="570SQ3uw6jx" role="16WEaR">
       <property role="TrG5h" value="Main" />
@@ -355,22 +313,41 @@
         <node concept="16YN88" id="2kniA9zTFQw" role="16Xdi2">
           <node concept="16MxcT" id="2kniA9zTFQB" role="16YN89">
             <node concept="16MxcT" id="2kniA9zTHev" role="16MxcW">
-              <node concept="16Xdjg" id="2kniA9zTHew" role="16MxcY" />
               <node concept="16X8gB" id="2kniA9zTHez" role="16MxcW">
                 <ref role="16XbQo" node="570SQ3uv0tg" resolve="Board" />
                 <ref role="16XbQm" node="570SQ3uv0sN" resolve="BobHand" />
               </node>
-              <node concept="16X4NW" id="2kniA9zUOnb" role="16MxcW" />
+              <node concept="16Z0eT" id="2kniA9zW4gq" role="16MxcW">
+                <node concept="16YMkM" id="2kniA9zW4gs" role="16YrAc">
+                  <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+                </node>
+                <node concept="3cmrfG" id="2kniA9zW4g$" role="16YrAi">
+                  <property role="3cmrfH" value="0" />
+                </node>
+              </node>
               <node concept="16X8gB" id="2kniA9zTHeO" role="16Mxc3">
                 <ref role="16XbQo" node="570SQ3uv0tg" resolve="Board" />
                 <ref role="16XbQm" node="570SQ3uv0sr" resolve="JimHand" />
               </node>
+              <node concept="16Z0eT" id="2kniA9zW4gG" role="16Mxc3">
+                <node concept="16YMkM" id="2kniA9zW4gI" role="16YrAc">
+                  <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+                </node>
+                <node concept="3cmrfG" id="2kniA9zW4gQ" role="16YrAi">
+                  <property role="3cmrfH" value="0" />
+                </node>
+              </node>
+              <node concept="16XZQi" id="2kniA9zWHHO" role="16MxcY">
+                <node concept="16SQh7" id="2kniA9zXnnB" role="16TKXA">
+                  <ref role="16SQh4" node="2kniA9zVre4" resolve="Counter" />
+                </node>
+              </node>
             </node>
-            <node concept="16XZQi" id="2kniA9zUOmd" role="16MxcY">
-              <node concept="3vQggq" id="2kniA9zUOmf" role="16Z_ah">
+            <node concept="16XZQi" id="2kniA9zWF6f" role="16MxcY">
+              <node concept="3vQggq" id="2kniA9zWF6h" role="16TKXA">
                 <ref role="3vQggr" node="_fMBrmAr5_" resolve="kamuinput" />
               </node>
-              <node concept="1H09on" id="2kniA9zUOmm" role="16Z_an">
+              <node concept="1H09on" id="2kniA9zWF6o" role="16TKX$">
                 <property role="1H09oo" value="true" />
               </node>
             </node>
@@ -380,21 +357,40 @@
             <ref role="16X4NS" node="570SQ3uv0sr" resolve="JimHand" />
             <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
           </node>
-          <node concept="16MxcT" id="2kniA9zTFRH" role="16YN89">
-            <node concept="16X4NW" id="2kniA9zTFRL" role="16MxcW" />
-            <node concept="16XZQi" id="2kniA9zUOmZ" role="16MxcY">
-              <node concept="3vQggq" id="2kniA9zUOn1" role="16Z_ah">
-                <ref role="3vQggr" node="_fMBrmAr5_" resolve="kamuinput" />
+          <node concept="16Z0eT" id="2kniA9zW4ho" role="16YN89">
+            <node concept="16YMkM" id="2kniA9zW4hq" role="16YrAc">
+              <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+            </node>
+            <node concept="3cpWs3" id="2kniA9zX2Sn" role="16YrAi">
+              <node concept="3cmrfG" id="2kniA9zX2Sq" role="3uHU7w">
+                <property role="3cmrfH" value="1" />
               </node>
-              <node concept="1H09on" id="2kniA9zUOn8" role="16Z_an">
-                <property role="1H09oo" value="true" />
+              <node concept="16YMkM" id="2kniA9zX2Sc" role="3uHU7B">
+                <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
               </node>
             </node>
+          </node>
+          <node concept="16MxcT" id="2kniA9zTFRH" role="16YN89">
+            <node concept="16X4NW" id="2kniA9zTFRL" role="16MxcW" />
+            <node concept="16Xdjg" id="2kniA9zXnq0" role="16MxcY" />
           </node>
           <node concept="16X4NV" id="2kniA9zTHfP" role="16YN89">
             <property role="16X6Zs" value="1" />
             <ref role="16X4NS" node="570SQ3uv0sN" resolve="BobHand" />
             <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
+          </node>
+          <node concept="16Z0eT" id="2kniA9zW4iF" role="16YN89">
+            <node concept="16YMkM" id="2kniA9zW4iH" role="16YrAc">
+              <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+            </node>
+            <node concept="3cpWs3" id="2kniA9zW4jD" role="16YrAi">
+              <node concept="3cmrfG" id="2kniA9zW4jG" role="3uHU7w">
+                <property role="3cmrfH" value="1" />
+              </node>
+              <node concept="16YMkM" id="2kniA9zW4je" role="3uHU7B">
+                <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -402,14 +398,9 @@
     <node concept="3vQggE" id="_fMBrmAr5_" role="3vQggh">
       <property role="TrG5h" value="kamuinput" />
     </node>
-    <node concept="3vQggE" id="2kniA9zUOne" role="3vQggh">
-      <property role="TrG5h" value="counter" />
-    </node>
-    <node concept="1H0bz6" id="2kniA9zU0E9" role="16Wb_R">
-      <node concept="1H09on" id="2kniA9zU0Ef" role="1H0bz9">
-        <property role="1H09oo" value="counterrrr" />
-      </node>
-      <node concept="1H09ok" id="2kniA9zU0Ei" role="1H0bzb">
+    <node concept="1H0bz6" id="2kniA9zVre4" role="16Wb_R">
+      <property role="TrG5h" value="Counter" />
+      <node concept="1H09ok" id="2kniA9zVre8" role="1H0bzb">
         <property role="1H09om" value="0" />
       </node>
     </node>
