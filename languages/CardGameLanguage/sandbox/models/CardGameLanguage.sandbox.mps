@@ -6,6 +6,9 @@
   </languages>
   <imports />
   <registry>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1068431790191" name="jetbrains.mps.baseLanguage.structure.Expression" flags="nn" index="33vP2n" />
+    </language>
     <language id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage">
       <concept id="4158612253542158351" name="CardGameLanguage.structure.Player" flags="ng" index="2bgsJ0">
         <child id="5890958317789593737" name="collections" index="2fIUfD" />
@@ -13,9 +16,20 @@
       <concept id="4158612253542213494" name="CardGameLanguage.structure.Game" flags="ng" index="2bjzMT">
         <reference id="5997851955997805208" name="deck" index="BBiKb" />
         <child id="4158612253542213501" name="players" index="2bjzMM" />
+        <child id="2672686690311074581" name="properties" index="16Wb_R" />
         <child id="2757081406054186073" name="phases" index="16WEaR" />
+        <child id="670977481256652391" name="inputfields" index="3vQggh" />
       </concept>
       <concept id="4158612253542199634" name="CardGameLanguage.structure.Pile" flags="ng" index="2bjAEt" />
+      <concept id="2672686690310379867" name="CardGameLanguage.structure.IfExpression" flags="ng" index="16MxcT">
+        <child id="2672686690310379873" name="false" index="16Mxc3" />
+        <child id="2672686690310379870" name="true" index="16MxcW" />
+        <child id="2672686690310379868" name="condition" index="16MxcY" />
+      </concept>
+      <concept id="2672686690311001094" name="CardGameLanguage.structure.Comparator" flags="ng" index="16WpT$">
+        <child id="2672686690311149811" name="left" index="16Z_ah" />
+        <child id="2672686690311149813" name="right" index="16Z_an" />
+      </concept>
       <concept id="2757081406054186070" name="CardGameLanguage.structure.Phase" flags="ng" index="16WEaS">
         <child id="2757081406054552083" name="actions" index="16X4NX" />
       </concept>
@@ -24,8 +38,13 @@
         <reference id="2757081406054552088" name="to" index="16X4NQ" />
         <reference id="2757081406054552086" name="from" index="16X4NS" />
       </concept>
+      <concept id="2757081406054552082" name="CardGameLanguage.structure.Action" flags="ng" index="16X4NW" />
       <concept id="2757081406054557952" name="CardGameLanguage.structure.Shuffle" flags="ng" index="16X7vI">
         <reference id="2757081406054557953" name="deck" index="16X7vJ" />
+      </concept>
+      <concept id="2757081406054570697" name="CardGameLanguage.structure.MoveAll" flags="ng" index="16X8gB">
+        <reference id="2757081406054572920" name="to" index="16XbQm" />
+        <reference id="2757081406054572918" name="from" index="16XbQo" />
       </concept>
       <concept id="2757081406054582858" name="CardGameLanguage.structure.While" flags="ng" index="16Xdi$">
         <child id="2757081406054582892" name="body" index="16Xdi2" />
@@ -34,9 +53,11 @@
       <concept id="2757081406054582857" name="CardGameLanguage.structure.Empty" flags="ng" index="16XdiB">
         <reference id="2757081406054601738" name="pile" index="16YKF$" />
       </concept>
+      <concept id="2757081406054582846" name="CardGameLanguage.structure.LogicalExpression" flags="ng" index="16Xdjg" />
       <concept id="2757081406054582845" name="CardGameLanguage.structure.Not" flags="ng" index="16Xdjj">
         <child id="2757081406054582855" name="expression" index="16XdiD" />
       </concept>
+      <concept id="2672686690310600688" name="CardGameLanguage.structure.Equals" flags="ng" index="16XZQi" />
       <concept id="2757081406054604739" name="CardGameLanguage.structure.Or" flags="ng" index="16YK4H" />
       <concept id="2757081406054604732" name="CardGameLanguage.structure.Operator" flags="ng" index="16YK5i">
         <child id="2757081406054604735" name="right" index="16YK5h" />
@@ -45,7 +66,13 @@
       <concept id="2757081406054608102" name="CardGameLanguage.structure.Turn" flags="ng" index="16YN88">
         <child id="2757081406054608103" name="actions" index="16YN89" />
       </concept>
-      <concept id="2757081406054618519" name="CardGameLanguage.structure.Kamu" flags="ng" index="16YOHT" />
+      <concept id="2672686690311293403" name="CardGameLanguage.structure.SetValue" flags="ng" index="16Z0eT">
+        <child id="2672686690311293404" name="expression" index="16Z0eY" />
+      </concept>
+      <concept id="670977481256652396" name="CardGameLanguage.structure.InputFieldReference" flags="ng" index="3vQggq">
+        <reference id="670977481256652397" name="inputfield" index="3vQggr" />
+      </concept>
+      <concept id="670977481256652380" name="CardGameLanguage.structure.InputField" flags="ng" index="3vQggE" />
       <concept id="6233642008867653012" name="CardGameLanguage.structure.Card" flags="ng" index="1H01RP">
         <child id="6233642008867693959" name="values" index="1H0bRA" />
       </concept>
@@ -306,6 +333,9 @@
         <ref role="16X4NS" node="5q2m64VxygR" resolve="FranciaKártya" />
         <ref role="16X4NQ" node="570SQ3uv0sr" resolve="JimHand" />
       </node>
+      <node concept="16Z0eT" id="2kniA9zV6V2" role="16X4NX">
+        <node concept="33vP2n" id="2kniA9zV8tc" role="16Z0eY" />
+      </node>
     </node>
     <node concept="16WEaS" id="570SQ3uw6jx" role="16WEaR">
       <property role="TrG5h" value="Main" />
@@ -322,20 +352,65 @@
             </node>
           </node>
         </node>
-        <node concept="16YN88" id="570SQ3ux0mB" role="16Xdi2">
-          <node concept="16X4NV" id="6POwaXZkoDN" role="16YN89">
-            <property role="16X6Zs" value="1" />
-            <ref role="16X4NS" node="570SQ3uv0sN" resolve="BobHand" />
-            <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
+        <node concept="16YN88" id="2kniA9zTFQw" role="16Xdi2">
+          <node concept="16MxcT" id="2kniA9zTFQB" role="16YN89">
+            <node concept="16MxcT" id="2kniA9zTHev" role="16MxcW">
+              <node concept="16Xdjg" id="2kniA9zTHew" role="16MxcY" />
+              <node concept="16X8gB" id="2kniA9zTHez" role="16MxcW">
+                <ref role="16XbQo" node="570SQ3uv0tg" resolve="Board" />
+                <ref role="16XbQm" node="570SQ3uv0sN" resolve="BobHand" />
+              </node>
+              <node concept="16X4NW" id="2kniA9zUOnb" role="16MxcW" />
+              <node concept="16X8gB" id="2kniA9zTHeO" role="16Mxc3">
+                <ref role="16XbQo" node="570SQ3uv0tg" resolve="Board" />
+                <ref role="16XbQm" node="570SQ3uv0sr" resolve="JimHand" />
+              </node>
+            </node>
+            <node concept="16XZQi" id="2kniA9zUOmd" role="16MxcY">
+              <node concept="3vQggq" id="2kniA9zUOmf" role="16Z_ah">
+                <ref role="3vQggr" node="_fMBrmAr5_" resolve="kamuinput" />
+              </node>
+              <node concept="1H09on" id="2kniA9zUOmm" role="16Z_an">
+                <property role="1H09oo" value="true" />
+              </node>
+            </node>
           </node>
-          <node concept="16YOHT" id="6POwaXZkoDS" role="16YN89" />
-          <node concept="16X4NV" id="6POwaXZkoE0" role="16YN89">
+          <node concept="16X4NV" id="2kniA9zTHf6" role="16YN89">
             <property role="16X6Zs" value="1" />
             <ref role="16X4NS" node="570SQ3uv0sr" resolve="JimHand" />
             <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
           </node>
-          <node concept="16YOHT" id="6POwaXZkoEa" role="16YN89" />
+          <node concept="16MxcT" id="2kniA9zTFRH" role="16YN89">
+            <node concept="16X4NW" id="2kniA9zTFRL" role="16MxcW" />
+            <node concept="16XZQi" id="2kniA9zUOmZ" role="16MxcY">
+              <node concept="3vQggq" id="2kniA9zUOn1" role="16Z_ah">
+                <ref role="3vQggr" node="_fMBrmAr5_" resolve="kamuinput" />
+              </node>
+              <node concept="1H09on" id="2kniA9zUOn8" role="16Z_an">
+                <property role="1H09oo" value="true" />
+              </node>
+            </node>
+          </node>
+          <node concept="16X4NV" id="2kniA9zTHfP" role="16YN89">
+            <property role="16X6Zs" value="1" />
+            <ref role="16X4NS" node="570SQ3uv0sN" resolve="BobHand" />
+            <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
+          </node>
         </node>
+      </node>
+    </node>
+    <node concept="3vQggE" id="_fMBrmAr5_" role="3vQggh">
+      <property role="TrG5h" value="kamuinput" />
+    </node>
+    <node concept="3vQggE" id="2kniA9zUOne" role="3vQggh">
+      <property role="TrG5h" value="counter" />
+    </node>
+    <node concept="1H0bz6" id="2kniA9zU0E9" role="16Wb_R">
+      <node concept="1H09on" id="2kniA9zU0Ef" role="1H0bz9">
+        <property role="1H09oo" value="counterrrr" />
+      </node>
+      <node concept="1H09ok" id="2kniA9zU0Ei" role="1H0bzb">
+        <property role="1H09om" value="0" />
       </node>
     </node>
   </node>

@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -53,7 +54,7 @@
     <property role="34LRSv" value="card" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Card" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5q2m64Vw$mm" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -111,14 +112,14 @@
     <property role="TrG5h" value="Value" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="Card" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="5q2m64VwI2B">
     <property role="EcuMT" value="6233642008867692711" />
     <property role="TrG5h" value="Property" />
     <property role="34LRSv" value="property" />
     <property role="3GE5qa" value="Card" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5q2m64VwI2C" role="1TKVEi">
       <property role="IQ2ns" value="6233642008867692712" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -158,7 +159,7 @@
     <property role="34LRSv" value="player" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Player" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="3AQmWYMXT0l" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -190,7 +191,21 @@
     <property role="TrG5h" value="Game" />
     <property role="34LRSv" value="game" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="_fMBrm_GTB" role="1TKVEi">
+      <property role="IQ2ns" value="670977481256652391" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="inputfields" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="_fMBrm_GTs" resolve="InputField" />
+    </node>
+    <node concept="1TJgyj" id="2kniA9zTZcl" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690311074581" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="properties" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5q2m64VwI2B" resolve="Property" />
+    </node>
     <node concept="1TJgyj" id="3AQmWYMY6tX" role="1TKVEi">
       <property role="IQ2ns" value="4158612253542213501" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -220,7 +235,7 @@
     <property role="34LRSv" value="phase" />
     <property role="R4oN_" value="A set of Actions" />
     <property role="3GE5qa" value="Action" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2p37ITwGrLn" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -238,7 +253,7 @@
     <property role="34LRSv" value="action" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="Action" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="2p37ITwHP8l">
     <property role="EcuMT" value="2757081406054552085" />
@@ -347,7 +362,7 @@
     <property role="TrG5h" value="LogicalExpression" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="Logical" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="2p37ITwHWD9">
     <property role="EcuMT" value="2757081406054582857" />
@@ -504,7 +519,120 @@
     <property role="3GE5qa" value="Player" />
     <property role="TrG5h" value="Collection" />
     <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="_fMBrm_GTs">
+    <property role="EcuMT" value="670977481256652380" />
+    <property role="TrG5h" value="InputField" />
+    <property role="3GE5qa" value="Input" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="_fMBrm_GTt" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="_fMBrm_GTG">
+    <property role="EcuMT" value="670977481256652396" />
+    <property role="3GE5qa" value="Input" />
+    <property role="TrG5h" value="InputFieldReference" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="_fMBrm_GTH" role="1TKVEi">
+      <property role="IQ2ns" value="670977481256652397" />
+      <property role="20kJfa" value="inputfield" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="_fMBrm_GTs" resolve="InputField" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2kniA9zRl_r">
+    <property role="EcuMT" value="2672686690310379867" />
+    <property role="3GE5qa" value="Logical" />
+    <property role="TrG5h" value="IfExpression" />
+    <property role="34LRSv" value="if" />
+    <ref role="1TJDcQ" node="2p37ITwHWDN" resolve="Command" />
+    <node concept="1TJgyj" id="2kniA9zRl_s" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690310379868" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2p37ITwHWCY" resolve="LogicalExpression" />
+    </node>
+    <node concept="1TJgyj" id="2kniA9zRl_u" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690310379870" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="true" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2p37ITwHP8i" resolve="Action" />
+    </node>
+    <node concept="1TJgyj" id="2kniA9zRl_x" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690310379873" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="false" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2p37ITwHP8i" resolve="Action" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2kniA9zSbvK">
+    <property role="EcuMT" value="2672686690310600688" />
+    <property role="3GE5qa" value="Operators" />
+    <property role="TrG5h" value="Equals" />
+    <property role="34LRSv" value="equals" />
+    <ref role="1TJDcQ" node="2kniA9zTHg6" resolve="Comparator" />
+  </node>
+  <node concept="1TIwiD" id="2kniA9zTHg6">
+    <property role="EcuMT" value="2672686690311001094" />
+    <property role="3GE5qa" value="Operators" />
+    <property role="TrG5h" value="Comparator" />
+    <ref role="1TJDcQ" node="2p37ITwHWCY" resolve="LogicalExpression" />
+    <node concept="1TJgyj" id="2kniA9zUhzN" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690311149811" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="left" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="_fMBrm_GTG" resolve="InputFieldReference" />
+    </node>
+    <node concept="1TJgyj" id="2kniA9zUhzP" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690311149813" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5q2m64VwGTV" resolve="Value" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2kniA9zTHg7">
+    <property role="EcuMT" value="2672686690311001095" />
+    <property role="3GE5qa" value="Card" />
+    <property role="TrG5h" value="CardReference" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2kniA9zTHg8" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690311001096" />
+      <property role="20kJfa" value="card" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5q2m64Vw$mk" resolve="Card" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2kniA9zUOBr">
+    <property role="EcuMT" value="2672686690311293403" />
+    <property role="3GE5qa" value="Action" />
+    <property role="TrG5h" value="SetValue" />
+    <ref role="1TJDcQ" node="2p37ITwHP8i" resolve="Action" />
+    <node concept="1TJgyj" id="2kniA9zUOBs" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690311293404" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="expression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2kniA9zV6Xg">
+    <property role="EcuMT" value="2672686690311368528" />
+    <property role="3GE5qa" value="Card" />
+    <property role="TrG5h" value="PropertyReference" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="2kniA9zV6Xh" role="1TKVEi">
+      <property role="IQ2ns" value="2672686690311368529" />
+      <property role="20kJfa" value="property" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5q2m64VwI2B" resolve="Property" />
+    </node>
   </node>
 </model>
 
