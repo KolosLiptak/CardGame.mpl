@@ -36,6 +36,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Or;
   private ConceptPresentation props_Phase;
   private ConceptPresentation props_Pile;
+  private ConceptPresentation props_PileMethod;
+  private ConceptPresentation props_PileReference;
   private ConceptPresentation props_Player;
   private ConceptPresentation props_Property;
   private ConceptPresentation props_PropertyReference;
@@ -47,6 +49,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Shuffle;
   private ConceptPresentation props_StringValue;
   private ConceptPresentation props_Token;
+  private ConceptPresentation props_TopOf;
   private ConceptPresentation props_Turn;
   private ConceptPresentation props_Value;
   private ConceptPresentation props_While;
@@ -243,6 +246,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Pile = cpb.create();
         }
         return props_Pile;
+      case LanguageConceptSwitch.PileMethod:
+        if (props_PileMethod == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PileMethod");
+          props_PileMethod = cpb.create();
+        }
+        return props_PileMethod;
+      case LanguageConceptSwitch.PileReference:
+        if (props_PileReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f7de4bL, 0x25174a6263f7de4cL, "pile", "", "");
+          props_PileReference = cpb.create();
+        }
+        return props_PileReference;
       case LanguageConceptSwitch.Player:
         if (props_Player == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -321,6 +338,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Token = cpb.create();
         }
         return props_Token;
+      case LanguageConceptSwitch.TopOf:
+        if (props_TopOf == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("top of");
+          props_TopOf = cpb.create();
+        }
+        return props_TopOf;
       case LanguageConceptSwitch.Turn:
         if (props_Turn == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

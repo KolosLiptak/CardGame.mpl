@@ -645,5 +645,31 @@
       <node concept="2iRfu4" id="2kniA9zX2SO" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="2kniA9zXXTl">
+    <property role="3GE5qa" value="Player" />
+    <ref role="1XX52x" to="ssdz:2kniA9zXXTb" resolve="PileReference" />
+    <node concept="1iCGBv" id="2kniA9zXXTn" role="2wV5jI">
+      <ref role="1NtTu8" to="ssdz:2kniA9zXXTc" resolve="pile" />
+      <node concept="1sVBvm" id="2kniA9zXXTp" role="1sWHZn">
+        <node concept="3F0A7n" id="2kniA9zXXTw" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2kniA9zXXTE">
+    <property role="3GE5qa" value="PileMethods" />
+    <ref role="1XX52x" to="ssdz:2kniA9zXXT5" resolve="PileMethod" />
+    <node concept="3EZMnI" id="2kniA9zZ1KT" role="2wV5jI">
+      <node concept="2iRfu4" id="2kniA9zZ1KW" role="2iSdaV" />
+      <node concept="PMmxH" id="2kniA9zZEC4" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="3F1sOY" id="2kniA9zZ1Lb" role="3EZMnx">
+        <ref role="1NtTu8" to="ssdz:2kniA9zXXT8" resolve="pilereference" />
+      </node>
+    </node>
+  </node>
 </model>
 

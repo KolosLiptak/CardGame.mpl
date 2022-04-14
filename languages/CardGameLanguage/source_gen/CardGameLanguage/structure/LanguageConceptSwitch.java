@@ -36,20 +36,23 @@ public final class LanguageConceptSwitch {
   public static final int Or = 24;
   public static final int Phase = 25;
   public static final int Pile = 26;
-  public static final int Player = 27;
-  public static final int Property = 28;
-  public static final int PropertyReference = 29;
-  public static final int PropertyReferenceArg = 30;
-  public static final int Select = 31;
-  public static final int SelectCard = 32;
-  public static final int SelectPile = 33;
-  public static final int SetValue = 34;
-  public static final int Shuffle = 35;
-  public static final int StringValue = 36;
-  public static final int Token = 37;
-  public static final int Turn = 38;
-  public static final int Value = 39;
-  public static final int While = 40;
+  public static final int PileMethod = 27;
+  public static final int PileReference = 28;
+  public static final int Player = 29;
+  public static final int Property = 30;
+  public static final int PropertyReference = 31;
+  public static final int PropertyReferenceArg = 32;
+  public static final int Select = 33;
+  public static final int SelectCard = 34;
+  public static final int SelectPile = 35;
+  public static final int SetValue = 36;
+  public static final int Shuffle = 37;
+  public static final int StringValue = 38;
+  public static final int Token = 39;
+  public static final int TopOf = 40;
+  public static final int Turn = 41;
+  public static final int Value = 42;
+  public static final int While = 43;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xe94dfae4e9d04770L, 0x965c58db5e543504L);
@@ -80,6 +83,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x26431eee60b81fc3L, Or);
     builder.put(0x26431eee60b1bc56L, Phase);
     builder.put(0x39b65bcfb2f83152L, Pile);
+    builder.put(0x25174a6263f7de45L, PileMethod);
+    builder.put(0x25174a6263f7de4bL, PileReference);
     builder.put(0x39b65bcfb2f7900fL, Player);
     builder.put(0x568258613b82e0a7L, Property);
     builder.put(0x25174a6263ec6f50L, PropertyReference);
@@ -91,6 +96,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x26431eee60b76900L, Shuffle);
     builder.put(0x568258613b82ce76L, StringValue);
     builder.put(0x568258613b824595L, Token);
+    builder.put(0x25174a6263f7de44L, TopOf);
     builder.put(0x26431eee60b82ce6L, Turn);
     builder.put(0x568258613b82ce7bL, Value);
     builder.put(0x26431eee60b7ca4aL, While);

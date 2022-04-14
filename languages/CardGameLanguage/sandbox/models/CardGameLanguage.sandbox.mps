@@ -33,6 +33,13 @@
         <child id="2672686690310379870" name="true" index="16MxcW" />
         <child id="2672686690310379868" name="condition" index="16MxcY" />
       </concept>
+      <concept id="2672686690312117828" name="CardGameLanguage.structure.TopOf" flags="ng" index="16S9gA" />
+      <concept id="2672686690312117829" name="CardGameLanguage.structure.PileMethod" flags="ng" index="16S9gB">
+        <child id="2672686690312117832" name="pilereference" index="16S9gE" />
+      </concept>
+      <concept id="2672686690312117835" name="CardGameLanguage.structure.PileReference" flags="ng" index="16S9gD">
+        <reference id="2672686690312117836" name="pile" index="16S9gI" />
+      </concept>
       <concept id="2672686690311876133" name="CardGameLanguage.structure.PropertyReferenceArg" flags="ng" index="16SQh7">
         <reference id="2672686690311876134" name="property" index="16SQh4" />
       </concept>
@@ -48,7 +55,6 @@
         <reference id="2757081406054552088" name="to" index="16X4NQ" />
         <reference id="2757081406054552086" name="from" index="16X4NS" />
       </concept>
-      <concept id="2757081406054552082" name="CardGameLanguage.structure.Action" flags="ng" index="16X4NW" />
       <concept id="2757081406054557952" name="CardGameLanguage.structure.Shuffle" flags="ng" index="16X7vI">
         <reference id="2757081406054557953" name="deck" index="16X7vJ" />
       </concept>
@@ -341,6 +347,11 @@
                 <node concept="16SQh7" id="2kniA9zXnnB" role="16TKXA">
                   <ref role="16SQh4" node="2kniA9zVre4" resolve="Counter" />
                 </node>
+                <node concept="16S9gA" id="2kniA9$03fA" role="16TKX$">
+                  <node concept="16S9gD" id="2kniA9$03fC" role="16S9gE">
+                    <ref role="16S9gI" node="570SQ3uv0tg" resolve="Board" />
+                  </node>
+                </node>
               </node>
             </node>
             <node concept="16XZQi" id="2kniA9zWF6f" role="16MxcY">
@@ -370,9 +381,8 @@
               </node>
             </node>
           </node>
-          <node concept="16MxcT" id="2kniA9zTFRH" role="16YN89">
-            <node concept="16X4NW" id="2kniA9zTFRL" role="16MxcW" />
-            <node concept="16Xdjg" id="2kniA9zXnq0" role="16MxcY" />
+          <node concept="16MxcT" id="2kniA9$03hN" role="16YN89">
+            <node concept="16Xdjg" id="2kniA9$03hP" role="16MxcY" />
           </node>
           <node concept="16X4NV" id="2kniA9zTHfP" role="16YN89">
             <property role="16X6Zs" value="1" />
