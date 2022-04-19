@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
@@ -218,6 +219,9 @@
     </node>
     <node concept="PrWs8" id="3AQmWYMY6tR" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="s8_8St0mRQ" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>
     <node concept="1TJgyj" id="5cWDDdOCoEo" role="1TKVEi">
       <property role="IQ2ns" value="5997851955997805208" />
@@ -481,7 +485,7 @@
     <property role="EcuMT" value="2757081406054633336" />
     <property role="3GE5qa" value="Action" />
     <property role="TrG5h" value="Select" />
-    <property role="34LRSv" value="select" />
+    <property role="34LRSv" value="select card" />
     <ref role="1TJDcQ" node="2p37ITwHP8i" resolve="Action" />
   </node>
   <node concept="1TIwiD" id="2p37ITwI8XT">
@@ -503,12 +507,6 @@
     <property role="TrG5h" value="SelectCard" />
     <property role="34LRSv" value="select card" />
     <ref role="1TJDcQ" node="2p37ITwI8XS" resolve="Select" />
-    <node concept="1TJgyj" id="2p37ITwI8XX" role="1TKVEi">
-      <property role="IQ2ns" value="2757081406054633341" />
-      <property role="20kJfa" value="card" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="5q2m64Vw$mk" resolve="Card" />
-    </node>
   </node>
   <node concept="1TIwiD" id="570SQ3uuO23">
     <property role="EcuMT" value="5890958317789593731" />
@@ -642,7 +640,7 @@
     <property role="3GE5qa" value="Operators" />
     <property role="TrG5h" value="Argument" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="2kniA9zX2S_">
     <property role="EcuMT" value="2672686690311876133" />

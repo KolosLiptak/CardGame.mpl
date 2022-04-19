@@ -287,6 +287,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Game", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f86776L);
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0x4caf0310491e41f5L, 0x8a9b2006b3a94898L, 0x40c1a7cb987d20d5L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/4158612253542213494");
     b.version(3);
     b.associate("deck", 0x533ca69374a18a98L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b8467c7L).optional(true).origin("5997851955997805208").done();
@@ -527,7 +528,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b75212L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2757081406054633336");
     b.version(3);
-    b.alias("select");
+    b.alias("select card");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSelectCard() {
@@ -537,7 +538,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f78L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2757081406054633340");
     b.version(3);
-    b.associate("card", 0x26431eee60b88f7dL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824594L).optional(false).origin("2757081406054633341").done();
     b.alias("select card");
     return b.create();
   }

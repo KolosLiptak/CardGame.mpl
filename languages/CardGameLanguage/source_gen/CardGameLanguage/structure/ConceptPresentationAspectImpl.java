@@ -291,7 +291,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Select:
         if (props_Select == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("select");
+          cpb.rawPresentation("select card");
           props_Select = cpb.create();
         }
         return props_Select;
