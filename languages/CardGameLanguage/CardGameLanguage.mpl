@@ -27,6 +27,7 @@
       <dependencies>
         <dependency reexport="false">e068dd9a-5fd3-47b6-8170-214869710bf7(CardGameLanguage.sandbox)</dependency>
         <dependency reexport="false">e94dfae4-e9d0-4770-965c-58db5e543504(CardGameLanguage)</dependency>
+        <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:e94dfae4-e9d0-4770-965c-58db5e543504:CardGameLanguage" version="0" />

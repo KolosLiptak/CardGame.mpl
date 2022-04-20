@@ -256,6 +256,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     // extends: CardGameLanguage.structure.Collection
     b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x51c0e360de7b4083L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0x4caf0310491e41f5L, 0x8a9b2006b3a94898L, 0x40c1a7cb987d20d5L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/6233642008867792839");
     b.version(3);
     b.aggregate("cards", 0x568258613b8467caL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824594L).optional(true).ordered(true).multiple(true).origin("6233642008867792842").done();
@@ -389,9 +390,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b75212L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2757081406054578284");
     b.version(3);
-    b.aggregate("selectedCard", 0x26431eee60b89f40L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f7cL).optional(false).ordered(true).multiple(false).origin("2757081406054637376").done();
-    b.aggregate("from", 0x26431eee60b89f42L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f79L).optional(false).ordered(true).multiple(false).origin("2757081406054637378").done();
-    b.aggregate("to", 0x26431eee60b89f45L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f79L).optional(false).ordered(true).multiple(false).origin("2757081406054637381").done();
+    b.associate("from", 0x708948e1d0f7bd4L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L).optional(false).origin("506818296173001684").done();
+    b.associate("to", 0x708948e1d0f7c60L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L).optional(false).origin("506818296173001824").done();
+    b.aggregate("select", 0x708948e1d0cea8aL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f78L).optional(false).ordered(true).multiple(false).origin("506818296172833418").done();
     b.alias("move selected");
     return b.create();
   }

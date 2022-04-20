@@ -62,6 +62,9 @@
         <reference id="2757081406054572920" name="to" index="16XbQm" />
         <reference id="2757081406054572918" name="from" index="16XbQo" />
       </concept>
+      <concept id="2757081406054578284" name="CardGameLanguage.structure.MoveSelected" flags="ng" index="16Xaq2">
+        <child id="506818296172833418" name="select" index="q17S4" />
+      </concept>
       <concept id="2757081406054582858" name="CardGameLanguage.structure.While" flags="ng" index="16Xdi$">
         <child id="2757081406054582892" name="body" index="16Xdi2" />
         <child id="2757081406054582886" name="condition" index="16Xdi8" />
@@ -232,24 +235,27 @@
               </node>
             </node>
           </node>
+          <node concept="16Xaq2" id="s8_8St3VVj" role="16YN89">
+            <node concept="16YT6m" id="s8_8St3VVl" role="q17S4" />
+          </node>
           <node concept="16YT6m" id="s8_8SsZTYc" role="16YN89" />
+          <node concept="16Z0eT" id="s8_8St3Vlh" role="16YN89">
+            <node concept="16YMkM" id="s8_8St3Vlj" role="16YrAc">
+              <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+            </node>
+            <node concept="3cpWs3" id="s8_8St3Vnl" role="16YrAi">
+              <node concept="3cmrfG" id="s8_8St3VnF" role="3uHU7w">
+                <property role="3cmrfH" value="1" />
+              </node>
+              <node concept="16YMkM" id="s8_8St3VmJ" role="3uHU7B">
+                <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
+              </node>
+            </node>
+          </node>
           <node concept="16X4NV" id="2kniA9zTHf6" role="16YN89">
             <property role="16X6Zs" value="1" />
             <ref role="16X4NS" node="570SQ3uv0sr" resolve="PlayerHand" />
             <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
-          </node>
-          <node concept="16Z0eT" id="2kniA9zW4ho" role="16YN89">
-            <node concept="16YMkM" id="2kniA9zW4hq" role="16YrAc">
-              <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
-            </node>
-            <node concept="3cpWs3" id="2kniA9zX2Sn" role="16YrAi">
-              <node concept="3cmrfG" id="2kniA9zX2Sq" role="3uHU7w">
-                <property role="3cmrfH" value="1" />
-              </node>
-              <node concept="16YMkM" id="2kniA9zX2Sc" role="3uHU7B">
-                <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
-              </node>
-            </node>
           </node>
           <node concept="16MxcT" id="2kniA9$03hN" role="16YN89">
             <node concept="16XZQi" id="s8_8SsZqFs" role="16MxcY">
@@ -286,19 +292,6 @@
             <property role="16X6Zs" value="1" />
             <ref role="16X4NS" node="570SQ3uv0sN" resolve="ComputerHand" />
             <ref role="16X4NQ" node="570SQ3uv0tg" resolve="Board" />
-          </node>
-          <node concept="16Z0eT" id="2kniA9zW4iF" role="16YN89">
-            <node concept="16YMkM" id="2kniA9zW4iH" role="16YrAc">
-              <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
-            </node>
-            <node concept="3cpWs3" id="2kniA9zW4jD" role="16YrAi">
-              <node concept="3cmrfG" id="2kniA9zW4jG" role="3uHU7w">
-                <property role="3cmrfH" value="1" />
-              </node>
-              <node concept="16YMkM" id="2kniA9zW4je" role="3uHU7B">
-                <ref role="16YMkN" node="2kniA9zVre4" resolve="Counter" />
-              </node>
-            </node>
           </node>
         </node>
       </node>

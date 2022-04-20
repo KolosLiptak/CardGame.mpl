@@ -4,13 +4,16 @@
   <languages>
     <use id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
+    <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="4" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
     <import index="ssdz" ref="r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)" />
     <import index="lwq" ref="r:ad6bd972-22be-4cd3-8350-04fadc09c5b1(CardGameLanguage.sandbox)" />
+    <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -18,6 +21,9 @@
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
+        <child id="1137022507850" name="body" index="2VODD2" />
       </concept>
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
@@ -69,16 +75,30 @@
       <concept id="1168619357332" name="jetbrains.mps.lang.generator.structure.RootTemplateAnnotation" flags="lg" index="n94m4">
         <reference id="1168619429071" name="applicableConcept" index="n9lRv" />
       </concept>
+      <concept id="1167169188348" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode" flags="nn" index="30H73N" />
       <concept id="1167169308231" name="jetbrains.mps.lang.generator.structure.BaseMappingRule" flags="ng" index="30H$t8">
         <reference id="1167169349424" name="applicableConcept" index="30HIoZ" />
       </concept>
+      <concept id="1087833241328" name="jetbrains.mps.lang.generator.structure.PropertyMacro" flags="ln" index="17Uvod">
+        <child id="1167756362303" name="propertyValueFunction" index="3zH0cK" />
+      </concept>
       <concept id="1167514355419" name="jetbrains.mps.lang.generator.structure.Root_MappingRule" flags="lg" index="3lhOvk">
         <reference id="1167514355421" name="template" index="3lhOvi" />
+      </concept>
+      <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
+    </language>
+    <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
+      <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
+        <property id="1757699476691236117" name="name_DebugInfo" index="2qtEX9" />
+        <property id="1341860900487648621" name="propertyId" index="P4ACc" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -87,43 +107,59 @@
   </registry>
   <node concept="bUwia" id="5q2m64Vw$mf">
     <property role="TrG5h" value="main" />
-    <node concept="3lhOvk" id="s8_8SsZVqY" role="3lj3bC">
+    <node concept="3lhOvk" id="s8_8St30TC" role="3lj3bC">
       <ref role="30HIoZ" to="ssdz:3AQmWYMY6tQ" resolve="Game" />
-      <ref role="3lhOvi" node="s8_8SsZVr0" resolve="map_Game" />
+      <ref role="3lhOvi" node="s8_8St30V4" resolve="map_Game" />
     </node>
   </node>
-  <node concept="312cEu" id="s8_8SsZVr0">
+  <node concept="312cEu" id="s8_8St30V4">
     <property role="TrG5h" value="map_Game" />
-    <node concept="2YIFZL" id="s8_8St0u20" role="jymVt">
+    <node concept="2YIFZL" id="s8_8St30XZ" role="jymVt">
       <property role="TrG5h" value="main" />
-      <node concept="3clFbS" id="s8_8St0u23" role="3clF47">
-        <node concept="3clFbF" id="s8_8St0ws2" role="3cqZAp">
-          <node concept="2OqwBi" id="s8_8St0wSQ" role="3clFbG">
-            <node concept="10M0yZ" id="s8_8St0wxl" role="2Oq$k0">
+      <node concept="37vLTG" id="s8_8St30Y0" role="3clF46">
+        <property role="TrG5h" value="args" />
+        <node concept="10Q1$e" id="s8_8St30Y1" role="1tU5fm">
+          <node concept="17QB3L" id="s8_8St30Y2" role="10Q1$1" />
+        </node>
+      </node>
+      <node concept="3cqZAl" id="s8_8St30Y3" role="3clF45" />
+      <node concept="3Tm1VV" id="s8_8St30Y4" role="1B3o_S" />
+      <node concept="3clFbS" id="s8_8St30Y5" role="3clF47">
+        <node concept="3clFbF" id="s8_8St31cE" role="3cqZAp">
+          <node concept="2OqwBi" id="s8_8St31$Y" role="3clFbG">
+            <node concept="10M0yZ" id="s8_8St31dc" role="2Oq$k0">
               <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
               <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
             </node>
-            <node concept="liA8E" id="s8_8St0y2K" role="2OqNvi">
+            <node concept="liA8E" id="s8_8St31FY" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
-              <node concept="Xl_RD" id="s8_8St0y8q" role="37wK5m">
-                <property role="Xl_RC" value="hello mps" />
+              <node concept="Xl_RD" id="s8_8St31Q5" role="37wK5m">
+                <property role="Xl_RC" value="Hello MPS" />
               </node>
             </node>
           </node>
         </node>
       </node>
-      <node concept="3Tm1VV" id="s8_8St0u1B" role="1B3o_S" />
-      <node concept="3cqZAl" id="s8_8St0u1P" role="3clF45" />
-      <node concept="37vLTG" id="s8_8St0u2q" role="3clF46">
-        <property role="TrG5h" value="args" />
-        <node concept="10Q1$e" id="s8_8St0u2X" role="1tU5fm">
-          <node concept="17QB3L" id="s8_8St0AxY" role="10Q1$1" />
+    </node>
+    <node concept="3Tm1VV" id="s8_8St30V5" role="1B3o_S" />
+    <node concept="n94m4" id="s8_8St30V6" role="lGtFl">
+      <ref role="n9lRv" to="ssdz:3AQmWYMY6tQ" resolve="Game" />
+    </node>
+    <node concept="17Uvod" id="s8_8St328j" role="lGtFl">
+      <property role="2qtEX9" value="name" />
+      <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+      <node concept="3zFVjK" id="s8_8St328k" role="3zH0cK">
+        <node concept="3clFbS" id="s8_8St328l" role="2VODD2">
+          <node concept="3clFbF" id="s8_8St32mi" role="3cqZAp">
+            <node concept="2OqwBi" id="s8_8St32zs" role="3clFbG">
+              <node concept="30H73N" id="s8_8St32mh" role="2Oq$k0" />
+              <node concept="3TrcHB" id="s8_8St32Oe" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
         </node>
       </node>
-    </node>
-    <node concept="3Tm1VV" id="s8_8SsZVr1" role="1B3o_S" />
-    <node concept="n94m4" id="s8_8SsZVr2" role="lGtFl">
-      <ref role="n9lRv" to="ssdz:3AQmWYMY6tQ" resolve="Game" />
     </node>
   </node>
 </model>

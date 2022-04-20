@@ -6,9 +6,9 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
-    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -141,6 +141,9 @@
     <ref role="1TJDcQ" node="570SQ3uuO23" resolve="Collection" />
     <node concept="PrWs8" id="5q2m64Vx6v8" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="s8_8St2NxE" role="PzmwI">
+      <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>
     <node concept="1TJgyj" id="5q2m64Vx6va" role="1TKVEi">
       <property role="IQ2ns" value="6233642008867792842" />
@@ -321,26 +324,24 @@
     <property role="TrG5h" value="MoveSelected" />
     <property role="34LRSv" value="move selected" />
     <ref role="1TJDcQ" node="2p37ITwHP8i" resolve="Action" />
-    <node concept="1TJgyj" id="2p37ITwI9X0" role="1TKVEi">
-      <property role="IQ2ns" value="2757081406054637376" />
+    <node concept="1TJgyj" id="s8_8St3eEa" role="1TKVEi">
+      <property role="IQ2ns" value="506818296172833418" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="selectedCard" />
+      <property role="20kJfa" value="select" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2p37ITwI8XW" resolve="SelectCard" />
+      <ref role="20lvS9" node="2p37ITwI8XS" resolve="Select" />
     </node>
-    <node concept="1TJgyj" id="2p37ITwI9X2" role="1TKVEi">
-      <property role="IQ2ns" value="2757081406054637378" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
+    <node concept="1TJgyj" id="s8_8St3RJk" role="1TKVEi">
+      <property role="IQ2ns" value="506818296173001684" />
       <property role="20kJfa" value="from" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2p37ITwI8XT" resolve="SelectPile" />
+      <ref role="20lvS9" node="3AQmWYMY35i" resolve="Pile" />
     </node>
-    <node concept="1TJgyj" id="2p37ITwI9X5" role="1TKVEi">
-      <property role="IQ2ns" value="2757081406054637381" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
+    <node concept="1TJgyj" id="s8_8St3RLw" role="1TKVEi">
+      <property role="IQ2ns" value="506818296173001824" />
       <property role="20kJfa" value="to" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2p37ITwI8XT" resolve="SelectPile" />
+      <ref role="20lvS9" node="3AQmWYMY35i" resolve="Pile" />
     </node>
   </node>
   <node concept="1TIwiD" id="2p37ITwHWCX">
