@@ -25,20 +25,26 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Equals;
   private ConceptPresentation props_Game;
   private ConceptPresentation props_GetCard;
+  private ConceptPresentation props_GreaterThan;
   private ConceptPresentation props_IfExpression;
   private ConceptPresentation props_InputField;
   private ConceptPresentation props_InputFieldReference;
   private ConceptPresentation props_IntValue;
   private ConceptPresentation props_Kamu;
+  private ConceptPresentation props_LessThan;
   private ConceptPresentation props_LogicalExpression;
   private ConceptPresentation props_Move;
   private ConceptPresentation props_MoveAll;
   private ConceptPresentation props_MoveSelected;
+  private ConceptPresentation props_MoveWhere;
   private ConceptPresentation props_Not;
   private ConceptPresentation props_Operator;
   private ConceptPresentation props_Optional;
   private ConceptPresentation props_Or;
+  private ConceptPresentation props_OrderAscending;
   private ConceptPresentation props_OrderByProperty;
+  private ConceptPresentation props_OrderDescending;
+  private ConceptPresentation props_OrderSort;
   private ConceptPresentation props_Phase;
   private ConceptPresentation props_Pile;
   private ConceptPresentation props_PileMethod;
@@ -57,6 +63,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_TopOf;
   private ConceptPresentation props_Turn;
   private ConceptPresentation props_Value;
+  private ConceptPresentation props_Where;
   private ConceptPresentation props_While;
 
   @Override
@@ -172,6 +179,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GetCard = cpb.create();
         }
         return props_GetCard;
+      case LanguageConceptSwitch.GreaterThan:
+        if (props_GreaterThan == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("greater than");
+          props_GreaterThan = cpb.create();
+        }
+        return props_GreaterThan;
       case LanguageConceptSwitch.IfExpression:
         if (props_IfExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -207,6 +221,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Kamu = cpb.create();
         }
         return props_Kamu;
+      case LanguageConceptSwitch.LessThan:
+        if (props_LessThan == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("less than");
+          props_LessThan = cpb.create();
+        }
+        return props_LessThan;
       case LanguageConceptSwitch.LogicalExpression:
         if (props_LogicalExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -236,6 +257,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MoveSelected = cpb.create();
         }
         return props_MoveSelected;
+      case LanguageConceptSwitch.MoveWhere:
+        if (props_MoveWhere == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("MoveWhere");
+          props_MoveWhere = cpb.create();
+        }
+        return props_MoveWhere;
       case LanguageConceptSwitch.Not:
         if (props_Not == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -264,6 +292,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Or = cpb.create();
         }
         return props_Or;
+      case LanguageConceptSwitch.OrderAscending:
+        if (props_OrderAscending == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ascending");
+          props_OrderAscending = cpb.create();
+        }
+        return props_OrderAscending;
       case LanguageConceptSwitch.OrderByProperty:
         if (props_OrderByProperty == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -271,6 +306,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OrderByProperty = cpb.create();
         }
         return props_OrderByProperty;
+      case LanguageConceptSwitch.OrderDescending:
+        if (props_OrderDescending == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("descending");
+          props_OrderDescending = cpb.create();
+        }
+        return props_OrderDescending;
+      case LanguageConceptSwitch.OrderSort:
+        if (props_OrderSort == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("OrderSort");
+          props_OrderSort = cpb.create();
+        }
+        return props_OrderSort;
       case LanguageConceptSwitch.Phase:
         if (props_Phase == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -398,6 +447,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Value = cpb.create();
         }
         return props_Value;
+      case LanguageConceptSwitch.Where:
+        if (props_Where == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("where");
+          props_Where = cpb.create();
+        }
+        return props_Where;
       case LanguageConceptSwitch.While:
         if (props_While == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
