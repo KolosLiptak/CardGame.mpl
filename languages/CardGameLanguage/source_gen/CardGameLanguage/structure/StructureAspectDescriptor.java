@@ -16,15 +16,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptAnd = createDescriptorForAnd();
   /*package*/ final ConceptDescriptor myConceptArgument = createDescriptorForArgument();
+  /*package*/ final ConceptDescriptor myConceptAskInput = createDescriptorForAskInput();
   /*package*/ final ConceptDescriptor myConceptCard = createDescriptorForCard();
+  /*package*/ final ConceptDescriptor myConceptCardComparator = createDescriptorForCardComparator();
   /*package*/ final ConceptDescriptor myConceptCardReference = createDescriptorForCardReference();
   /*package*/ final ConceptDescriptor myConceptCollection = createDescriptorForCollection();
   /*package*/ final ConceptDescriptor myConceptCommand = createDescriptorForCommand();
   /*package*/ final ConceptDescriptor myConceptComparator = createDescriptorForComparator();
   /*package*/ final ConceptDescriptor myConceptDeck = createDescriptorForDeck();
+  /*package*/ final ConceptDescriptor myConceptDeckComparator = createDescriptorForDeckComparator();
   /*package*/ final ConceptDescriptor myConceptEmpty = createDescriptorForEmpty();
   /*package*/ final ConceptDescriptor myConceptEquals = createDescriptorForEquals();
   /*package*/ final ConceptDescriptor myConceptGame = createDescriptorForGame();
+  /*package*/ final ConceptDescriptor myConceptGetCard = createDescriptorForGetCard();
   /*package*/ final ConceptDescriptor myConceptIfExpression = createDescriptorForIfExpression();
   /*package*/ final ConceptDescriptor myConceptInputField = createDescriptorForInputField();
   /*package*/ final ConceptDescriptor myConceptInputFieldReference = createDescriptorForInputFieldReference();
@@ -38,6 +42,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptOperator = createDescriptorForOperator();
   /*package*/ final ConceptDescriptor myConceptOptional = createDescriptorForOptional();
   /*package*/ final ConceptDescriptor myConceptOr = createDescriptorForOr();
+  /*package*/ final ConceptDescriptor myConceptOrderByProperty = createDescriptorForOrderByProperty();
   /*package*/ final ConceptDescriptor myConceptPhase = createDescriptorForPhase();
   /*package*/ final ConceptDescriptor myConceptPile = createDescriptorForPile();
   /*package*/ final ConceptDescriptor myConceptPileMethod = createDescriptorForPileMethod();
@@ -47,8 +52,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptPropertyReference = createDescriptorForPropertyReference();
   /*package*/ final ConceptDescriptor myConceptPropertyReferenceArg = createDescriptorForPropertyReferenceArg();
   /*package*/ final ConceptDescriptor myConceptSelect = createDescriptorForSelect();
-  /*package*/ final ConceptDescriptor myConceptSelectCard = createDescriptorForSelectCard();
   /*package*/ final ConceptDescriptor myConceptSelectPile = createDescriptorForSelectPile();
+  /*package*/ final ConceptDescriptor myConceptSelectedCard = createDescriptorForSelectedCard();
   /*package*/ final ConceptDescriptor myConceptSetValue = createDescriptorForSetValue();
   /*package*/ final ConceptDescriptor myConceptShuffle = createDescriptorForShuffle();
   /*package*/ final ConceptDescriptor myConceptStringValue = createDescriptorForStringValue();
@@ -73,7 +78,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptAnd, myConceptArgument, myConceptCard, myConceptCardReference, myConceptCollection, myConceptCommand, myConceptComparator, myConceptDeck, myConceptEmpty, myConceptEquals, myConceptGame, myConceptIfExpression, myConceptInputField, myConceptInputFieldReference, myConceptIntValue, myConceptKamu, myConceptLogicalExpression, myConceptMove, myConceptMoveAll, myConceptMoveSelected, myConceptNot, myConceptOperator, myConceptOptional, myConceptOr, myConceptPhase, myConceptPile, myConceptPileMethod, myConceptPileReference, myConceptPlayer, myConceptProperty, myConceptPropertyReference, myConceptPropertyReferenceArg, myConceptSelect, myConceptSelectCard, myConceptSelectPile, myConceptSetValue, myConceptShuffle, myConceptStringValue, myConceptToken, myConceptTopOf, myConceptTurn, myConceptValue, myConceptWhile);
+    return Arrays.asList(myConceptAction, myConceptAnd, myConceptArgument, myConceptAskInput, myConceptCard, myConceptCardComparator, myConceptCardReference, myConceptCollection, myConceptCommand, myConceptComparator, myConceptDeck, myConceptDeckComparator, myConceptEmpty, myConceptEquals, myConceptGame, myConceptGetCard, myConceptIfExpression, myConceptInputField, myConceptInputFieldReference, myConceptIntValue, myConceptKamu, myConceptLogicalExpression, myConceptMove, myConceptMoveAll, myConceptMoveSelected, myConceptNot, myConceptOperator, myConceptOptional, myConceptOr, myConceptOrderByProperty, myConceptPhase, myConceptPile, myConceptPileMethod, myConceptPileReference, myConceptPlayer, myConceptProperty, myConceptPropertyReference, myConceptPropertyReferenceArg, myConceptSelect, myConceptSelectPile, myConceptSelectedCard, myConceptSetValue, myConceptShuffle, myConceptStringValue, myConceptToken, myConceptTopOf, myConceptTurn, myConceptValue, myConceptWhile);
   }
 
   @Override
@@ -86,8 +91,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAnd;
       case LanguageConceptSwitch.Argument:
         return myConceptArgument;
+      case LanguageConceptSwitch.AskInput:
+        return myConceptAskInput;
       case LanguageConceptSwitch.Card:
         return myConceptCard;
+      case LanguageConceptSwitch.CardComparator:
+        return myConceptCardComparator;
       case LanguageConceptSwitch.CardReference:
         return myConceptCardReference;
       case LanguageConceptSwitch.Collection:
@@ -98,12 +107,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptComparator;
       case LanguageConceptSwitch.Deck:
         return myConceptDeck;
+      case LanguageConceptSwitch.DeckComparator:
+        return myConceptDeckComparator;
       case LanguageConceptSwitch.Empty:
         return myConceptEmpty;
       case LanguageConceptSwitch.Equals:
         return myConceptEquals;
       case LanguageConceptSwitch.Game:
         return myConceptGame;
+      case LanguageConceptSwitch.GetCard:
+        return myConceptGetCard;
       case LanguageConceptSwitch.IfExpression:
         return myConceptIfExpression;
       case LanguageConceptSwitch.InputField:
@@ -130,6 +143,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptOptional;
       case LanguageConceptSwitch.Or:
         return myConceptOr;
+      case LanguageConceptSwitch.OrderByProperty:
+        return myConceptOrderByProperty;
       case LanguageConceptSwitch.Phase:
         return myConceptPhase;
       case LanguageConceptSwitch.Pile:
@@ -148,10 +163,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPropertyReferenceArg;
       case LanguageConceptSwitch.Select:
         return myConceptSelect;
-      case LanguageConceptSwitch.SelectCard:
-        return myConceptSelectCard;
       case LanguageConceptSwitch.SelectPile:
         return myConceptSelectPile;
+      case LanguageConceptSwitch.SelectedCard:
+        return myConceptSelectedCard;
       case LanguageConceptSwitch.SetValue:
         return myConceptSetValue;
       case LanguageConceptSwitch.Shuffle:
@@ -199,8 +214,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForArgument() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Argument", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f2b19bL);
     b.class_(false, true, false);
+    // extends: jetbrains.mps.baseLanguage.structure.Expression
+    b.super_(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2672686690311778715");
     b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAskInput() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "AskInput", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x1046bb4245f4fb5aL);
+    b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.Action
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b75212L);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/1172830646292511578");
+    b.version(3);
+    b.associate("inputs", 0x1046bb4245f76ce8L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x94fca76d696ce5cL).optional(false).origin("1172830646292671720").done();
+    b.alias("ask input");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCard() {
@@ -211,6 +239,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.aggregate("values", 0x568258613b82e587L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L).optional(true).ordered(true).multiple(true).origin("6233642008867693959").done();
     b.alias("card");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCardComparator() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "CardComparator", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x1046bb4245fca36aL);
+    b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.LogicalExpression
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b7ca3eL);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/1172830646293013354");
+    b.version(3);
+    b.aggregate("left", 0x1046bb4245fca373L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263e6d407L).optional(false).ordered(true).multiple(false).origin("1172830646293013363").done();
+    b.aggregate("right", 0x1046bb4245fca375L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263e6d407L).optional(false).ordered(true).multiple(false).origin("1172830646293013365").done();
+    b.aggregate("property", 0x1046bb4245fca378L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263ec6f50L).optional(false).ordered(true).multiple(false).origin("1172830646293013368").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCardReference() {
@@ -263,6 +303,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("deck");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDeckComparator() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "DeckComparator", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x1046bb424607173bL);
+    b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.LogicalExpression
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b7ca3eL);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/1172830646293698363");
+    b.version(3);
+    b.aggregate("left", 0x1046bb424607174eL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f7de4bL).optional(false).ordered(true).multiple(false).origin("1172830646293698382").done();
+    b.aggregate("right", 0x1046bb4246071750L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f7de4bL).optional(false).ordered(true).multiple(false).origin("1172830646293698384").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForEmpty() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Empty", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b7ca49L);
     b.class_(false, false, false);
@@ -297,6 +348,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("players", 0x39b65bcfb2f8677dL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f7900fL).optional(true).ordered(true).multiple(true).origin("4158612253542213501").done();
     b.aggregate("phases", 0x26431eee60b1bc59L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b1bc56L).optional(false).ordered(true).multiple(true).origin("2757081406054186073").done();
     b.alias("game");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGetCard() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "GetCard", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x1046bb4245ffde0dL);
+    b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.Action
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b75212L);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/1172830646293224973");
+    b.version(3);
+    b.aggregate("argument", 0x1046bb4246059b6eL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f2b19bL).optional(false).ordered(true).multiple(false).origin("1172830646293601134").done();
+    b.alias("get card");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIfExpression() {
@@ -440,6 +502,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("or");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForOrderByProperty() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "OrderByProperty", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x1046bb4245fb3c04L);
+    b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.Action
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b75212L);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/1172830646292921348");
+    b.version(3);
+    b.associate("property", 0x1046bb4245fb3c0dL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L).optional(false).origin("1172830646292921357").done();
+    b.associate("pile", 0x1046bb4245fb3c5fL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L).optional(false).origin("1172830646292921439").done();
+    b.alias("order by");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForPhase() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Phase", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b1bc56L);
     b.class_(false, false, false);
@@ -474,6 +548,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForPileReference() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "PileReference", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f7de4bL);
     b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.Argument
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f2b19bL);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2672686690312117835");
     b.version(3);
     b.associate("pile", 0x25174a6263f7de4cL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L).optional(false).origin("2672686690312117836").done();
@@ -529,16 +605,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b75212L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2757081406054633336");
     b.version(3);
-    b.alias("select card");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForSelectCard() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "SelectCard", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f7cL);
-    b.class_(false, false, false);
-    // extends: CardGameLanguage.structure.Select
-    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x26431eee60b88f78L);
-    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/2757081406054633340");
-    b.version(3);
+    b.associate("player", 0x1046bb4245fe6730L).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f7900fL).optional(false).origin("1172830646293129008").done();
     b.alias("select card");
     return b.create();
   }
@@ -551,6 +618,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.associate("pile", 0x26431eee60b88f7aL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x39b65bcfb2f83152L).optional(false).origin("2757081406054633338").done();
     b.alias("select pile");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForSelectedCard() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "SelectedCard", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x1046bb4245fcd667L);
+    b.class_(false, false, false);
+    // extends: CardGameLanguage.structure.Argument
+    b.super_(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263f2b19bL);
+    b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/1172830646293026407");
+    b.version(3);
+    b.alias("selected card");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSetValue() {

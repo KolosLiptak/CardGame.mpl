@@ -12,15 +12,19 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_And;
   private ConceptPresentation props_Argument;
+  private ConceptPresentation props_AskInput;
   private ConceptPresentation props_Card;
+  private ConceptPresentation props_CardComparator;
   private ConceptPresentation props_CardReference;
   private ConceptPresentation props_Collection;
   private ConceptPresentation props_Command;
   private ConceptPresentation props_Comparator;
   private ConceptPresentation props_Deck;
+  private ConceptPresentation props_DeckComparator;
   private ConceptPresentation props_Empty;
   private ConceptPresentation props_Equals;
   private ConceptPresentation props_Game;
+  private ConceptPresentation props_GetCard;
   private ConceptPresentation props_IfExpression;
   private ConceptPresentation props_InputField;
   private ConceptPresentation props_InputFieldReference;
@@ -34,6 +38,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Operator;
   private ConceptPresentation props_Optional;
   private ConceptPresentation props_Or;
+  private ConceptPresentation props_OrderByProperty;
   private ConceptPresentation props_Phase;
   private ConceptPresentation props_Pile;
   private ConceptPresentation props_PileMethod;
@@ -43,8 +48,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PropertyReference;
   private ConceptPresentation props_PropertyReferenceArg;
   private ConceptPresentation props_Select;
-  private ConceptPresentation props_SelectCard;
   private ConceptPresentation props_SelectPile;
+  private ConceptPresentation props_SelectedCard;
   private ConceptPresentation props_SetValue;
   private ConceptPresentation props_Shuffle;
   private ConceptPresentation props_StringValue;
@@ -78,6 +83,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Argument = cpb.create();
         }
         return props_Argument;
+      case LanguageConceptSwitch.AskInput:
+        if (props_AskInput == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ask input");
+          props_AskInput = cpb.create();
+        }
+        return props_AskInput;
       case LanguageConceptSwitch.Card:
         if (props_Card == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -85,6 +97,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Card = cpb.create();
         }
         return props_Card;
+      case LanguageConceptSwitch.CardComparator:
+        if (props_CardComparator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("CardComparator");
+          props_CardComparator = cpb.create();
+        }
+        return props_CardComparator;
       case LanguageConceptSwitch.CardReference:
         if (props_CardReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -118,6 +137,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Deck = cpb.create();
         }
         return props_Deck;
+      case LanguageConceptSwitch.DeckComparator:
+        if (props_DeckComparator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DeckComparator");
+          props_DeckComparator = cpb.create();
+        }
+        return props_DeckComparator;
       case LanguageConceptSwitch.Empty:
         if (props_Empty == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -139,6 +165,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Game = cpb.create();
         }
         return props_Game;
+      case LanguageConceptSwitch.GetCard:
+        if (props_GetCard == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("get card");
+          props_GetCard = cpb.create();
+        }
+        return props_GetCard;
       case LanguageConceptSwitch.IfExpression:
         if (props_IfExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -231,6 +264,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Or = cpb.create();
         }
         return props_Or;
+      case LanguageConceptSwitch.OrderByProperty:
+        if (props_OrderByProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("order by");
+          props_OrderByProperty = cpb.create();
+        }
+        return props_OrderByProperty;
       case LanguageConceptSwitch.Phase:
         if (props_Phase == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -295,13 +335,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Select = cpb.create();
         }
         return props_Select;
-      case LanguageConceptSwitch.SelectCard:
-        if (props_SelectCard == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("select card");
-          props_SelectCard = cpb.create();
-        }
-        return props_SelectCard;
       case LanguageConceptSwitch.SelectPile:
         if (props_SelectPile == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -309,6 +342,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SelectPile = cpb.create();
         }
         return props_SelectPile;
+      case LanguageConceptSwitch.SelectedCard:
+        if (props_SelectedCard == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("selected card");
+          props_SelectedCard = cpb.create();
+        }
+        return props_SelectedCard;
       case LanguageConceptSwitch.SetValue:
         if (props_SetValue == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
