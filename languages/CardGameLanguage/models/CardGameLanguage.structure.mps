@@ -53,7 +53,6 @@
     <property role="EcuMT" value="6233642008867653012" />
     <property role="TrG5h" value="Card" />
     <property role="34LRSv" value="card" />
-    <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Card" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5q2m64Vw$mm" role="PzmwI">
@@ -118,7 +117,7 @@
   <node concept="1TIwiD" id="5q2m64VwI2B">
     <property role="EcuMT" value="6233642008867692711" />
     <property role="TrG5h" value="Property" />
-    <property role="34LRSv" value="property" />
+    <property role="34LRSv" value="myproperty" />
     <property role="3GE5qa" value="Card" />
     <ref role="1TJDcQ" node="2kniA9zWF6r" resolve="Argument" />
     <node concept="1TJgyj" id="5q2m64VwI2E" role="1TKVEi">
@@ -841,7 +840,7 @@
     <property role="EcuMT" value="4118050918680069595" />
     <property role="3GE5qa" value="PileMethods" />
     <property role="TrG5h" value="OrderSort" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="3$AgnRYTonO">
     <property role="EcuMT" value="4118050918680069620" />

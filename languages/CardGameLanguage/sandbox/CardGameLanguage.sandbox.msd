@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solution name="CardGameLanguage.sandbox" uuid="e068dd9a-5fd3-47b6-8170-214869710bf7" moduleVersion="0" compileInMPS="true">
   <models>
+    <modelRoot contentPath="D:/MPS Projects/languages/CardGame" type="default" />
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
+      <sourceRoot location="models/CardGameLanguage.sandbox.mps" />
+      <sourceRoot location="models/CardGameLanguage.sandbox.JavaCards.mps" />
     </modelRoot>
-    <modelRoot contentPath="D:/MPS Projects/languages/CardGame" type="default" />
   </models>
   <facets>
     <facet type="java">
@@ -13,7 +15,7 @@
   </facets>
   <sourcePath />
   <dependencies>
-    <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
+    <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:e94dfae4-e9d0-4770-965c-58db5e543504:CardGameLanguage" version="0" />

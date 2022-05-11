@@ -254,7 +254,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForCard() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CardGameLanguage", "Card", 0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b824594L);
-    b.class_(false, false, true);
+    b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/6233642008867653012");
     b.version(3);
@@ -656,7 +656,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:afcff3ea-f21b-45f4-91f1-e25c88e4b8f5(CardGameLanguage.structure)/6233642008867692711");
     b.version(3);
     b.aggregate("propertyValue", 0x568258613b82e0aaL).target(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82ce7bL).optional(false).ordered(true).multiple(false).origin("6233642008867692714").done();
-    b.alias("property");
+    b.alias("myproperty");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPropertyReference() {
