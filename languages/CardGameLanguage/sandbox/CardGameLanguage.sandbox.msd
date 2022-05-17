@@ -5,7 +5,6 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
       <sourceRoot location="models/CardGameLanguage.sandbox.mps" />
-      <sourceRoot location="models/CardGameLanguage.sandbox.JavaCards.mps" />
     </modelRoot>
   </models>
   <facets>

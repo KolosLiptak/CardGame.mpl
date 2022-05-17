@@ -4,8 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/CardGameLanguage/CardGameLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/CardGameLanguage/sandbox/CardGameLanguage.sandbox.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/CardClasses/CardClasses.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/CardsJava/CardsJava.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/Runtime/Runtime.msd" folder="" />
     </projectModules>
   </component>
 </project>
