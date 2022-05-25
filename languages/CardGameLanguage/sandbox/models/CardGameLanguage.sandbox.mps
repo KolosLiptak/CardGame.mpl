@@ -5,35 +5,17 @@
     <use id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
   </languages>
-  <imports>
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-  </imports>
+  <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
-      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
-      <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
-        <child id="5680397130376446158" name="type" index="1tU5fm" />
-      </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
-      <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
-        <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
-      </concept>
-      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
-        <reference id="1107535924139" name="classifier" index="3uigEE" />
-      </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
-      <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
-        <child id="1178549979242" name="visibility" index="1B3o_S" />
-      </concept>
-      <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
-      <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="e94dfae4-e9d0-4770-965c-58db5e543504" name="CardGameLanguage">
       <concept id="4158612253542158351" name="CardGameLanguage.structure.Player" flags="ng" index="2bgsJ0">
@@ -160,9 +142,6 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -1162,7 +1141,7 @@
   <node concept="1H1zYA" id="116IO95WVVz">
     <property role="TrG5h" value="Cars" />
     <node concept="1H01RP" id="116IO95WVVY" role="1H1zYF">
-      <property role="TrG5h" value="Porsche 911" />
+      <property role="TrG5h" value="Porsche911" />
       <node concept="1H0bz6" id="116IO95WVYv" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95WVYz" role="1H0bzb">
@@ -1189,7 +1168,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVW0" role="1H1zYF">
-      <property role="TrG5h" value="Lamborghini Huracan" />
+      <property role="TrG5h" value="LamborghiniHuracan" />
       <node concept="1H0bz6" id="116IO95Xfjf" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xfjs" role="1H0bzb">
@@ -1216,7 +1195,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVWt" role="1H1zYF">
-      <property role="TrG5h" value="Ferrari F150" />
+      <property role="TrG5h" value="FerrariF150" />
       <node concept="1H0bz6" id="116IO95XfkO" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95XfkY" role="1H0bzb">
@@ -1243,7 +1222,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVWL" role="1H1zYF">
-      <property role="TrG5h" value="Nissan Skyline" />
+      <property role="TrG5h" value="NissanSkyline" />
       <node concept="1H0bz6" id="116IO95Xfm$" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95XfmC" role="1H0bzb">
@@ -1270,7 +1249,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVWU" role="1H1zYF">
-      <property role="TrG5h" value="Mazda RX7" />
+      <property role="TrG5h" value="MazdaRX7" />
       <node concept="1H0bz6" id="116IO95Xfnc" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xfnm" role="1H0bzb">
@@ -1297,7 +1276,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVYe" role="1H1zYF">
-      <property role="TrG5h" value="Toyota Supra" />
+      <property role="TrG5h" value="ToyotaSupra" />
       <node concept="1H0bz6" id="116IO95Xfoi" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xfom" role="1H0bzb">
@@ -1324,7 +1303,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVX6" role="1H1zYF">
-      <property role="TrG5h" value="Dodge Viper" />
+      <property role="TrG5h" value="DodgeViper" />
       <node concept="1H0bz6" id="116IO95XfoU" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xfp7" role="1H0bzb">
@@ -1351,7 +1330,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVXh" role="1H1zYF">
-      <property role="TrG5h" value="Ford GTR" />
+      <property role="TrG5h" value="FordGTR" />
       <node concept="1H0bz6" id="116IO95XfpF" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95XfpJ" role="1H0bzb">
@@ -1378,7 +1357,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVXv" role="1H1zYF">
-      <property role="TrG5h" value="Chevrolet Corvette" />
+      <property role="TrG5h" value="ChevroletCorvette" />
       <node concept="1H0bz6" id="116IO95Xfqj" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xfqn" role="1H0bzb">
@@ -1405,7 +1384,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95WVXC" role="1H1zYF">
-      <property role="TrG5h" value="Aston Martin DB9" />
+      <property role="TrG5h" value="AstonMartinDB9" />
       <node concept="1H0bz6" id="116IO95XfqV" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95XfqZ" role="1H0bzb">
@@ -1432,7 +1411,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95Xfw$" role="1H1zYF">
-      <property role="TrG5h" value="Lotus Elise" />
+      <property role="TrG5h" value="LotusElise" />
       <node concept="1H0bz6" id="116IO95Xfy6" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xfya" role="1H0bzb">
@@ -1459,7 +1438,7 @@
       </node>
     </node>
     <node concept="1H01RP" id="116IO95XfyI" role="1H1zYF">
-      <property role="TrG5h" value="Bugatti Veyron" />
+      <property role="TrG5h" value="BugattiVeyron" />
       <node concept="1H0bz6" id="116IO95Xf$p" role="1H0bRA">
         <property role="TrG5h" value="Top Speed" />
         <node concept="1H09ok" id="116IO95Xf$t" role="1H0bzb">
@@ -1695,18 +1674,6 @@
         <property role="1H09oo" value="cecilSelected" />
       </node>
     </node>
-  </node>
-  <node concept="312cEu" id="5LhuT8gKe1U">
-    <property role="TrG5h" value="Deck" />
-    <property role="3GE5qa" value="Classes" />
-    <node concept="312cEg" id="5LhuT8gKeam" role="jymVt">
-      <property role="TrG5h" value="value" />
-      <node concept="3Tm6S6" id="5LhuT8gKe9V" role="1B3o_S" />
-      <node concept="3uibUv" id="5LhuT8gKeab" role="1tU5fm">
-        <ref role="3uigEE" to="wyt6:~Integer" resolve="Integer" />
-      </node>
-    </node>
-    <node concept="3Tm1VV" id="5LhuT8gKe1V" role="1B3o_S" />
   </node>
 </model>
 

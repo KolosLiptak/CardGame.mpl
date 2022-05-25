@@ -43,6 +43,9 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object propertyMacro_GetValue_6_1(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
+  public static Object propertyMacro_GetValue_6_2(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
   public static Object propertyMacro_GetValue_7_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
@@ -84,6 +87,9 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Iterable<SNode> sourceNodesQuery_5_1(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.false$EBKf);
+  }
+  public static Iterable<SNode> sourceNodesQuery_7_0(final SourceSubstituteMacroNodesContext _context) {
+    return SLinkOperations.getChildren(_context.getNode(), LINKS.cards$mCeG);
   }
   private final Map<String, SourceNodeQuery> snqMethods = new HashMap<String, SourceNodeQuery>();
   {
@@ -134,6 +140,7 @@ public class QueriesGenerated extends QueryProviderBase {
     int i = 0;
     snsqMethods.put("4118050918680669578", new SNsQ(i++));
     snsqMethods.put("4118050918680670086", new SNsQ(i++));
+    snsqMethods.put("479138582680839433", new SNsQ(i++));
   }
   @NotNull
   @Override
@@ -153,6 +160,8 @@ public class QueriesGenerated extends QueryProviderBase {
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_5_0(ctx));
         case 1:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_5_1(ctx));
+        case 2:
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_7_0(ctx));
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -163,9 +172,10 @@ public class QueriesGenerated extends QueryProviderBase {
     int i = 0;
     pvqMethods.put("7238331386673430296", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), "I have a deck named deck"));
     pvqMethods.put("506818296172782099", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_Game"));
-    pvqMethods.put("2557592480485626085", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), "name"));
-    pvqMethods.put("2557592480485625285", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "card"));
-    pvqMethods.put("7238331386674691419", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_Deck"));
+    pvqMethods.put("479138582680517113", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), "name"));
+    pvqMethods.put("479138582680846284", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), "name"));
+    pvqMethods.put("479138582680845253", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "card"));
+    pvqMethods.put("5022022609646957333", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_Deck"));
     pvqMethods.put("2557592480484507098", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "string"));
     pvqMethods.put("2557592480484769602", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), "string"));
     pvqMethods.put("2557592480484772607", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "0"));
@@ -195,14 +205,16 @@ public class QueriesGenerated extends QueryProviderBase {
         case 3:
           return QueriesGenerated.propertyMacro_GetValue_6_1(ctx);
         case 4:
-          return QueriesGenerated.propertyMacro_GetValue_7_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_2(ctx);
         case 5:
-          return QueriesGenerated.propertyMacro_GetValue_8_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_7_0(ctx);
         case 6:
-          return QueriesGenerated.propertyMacro_GetValue_9_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_8_0(ctx);
         case 7:
-          return QueriesGenerated.propertyMacro_GetValue_10_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_9_0(ctx);
         case 8:
+          return QueriesGenerated.propertyMacro_GetValue_10_0(ctx);
+        case 9:
           return QueriesGenerated.propertyMacro_GetValue_11_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -219,6 +231,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink propertyValue$wN6n = MetaAdapterFactory.getContainmentLink(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b82e0a7L, 0x568258613b82e0aaL, "propertyValue");
     /*package*/ static final SContainmentLink true$EB3c = MetaAdapterFactory.getContainmentLink(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263dd595bL, 0x25174a6263dd595eL, "true");
     /*package*/ static final SContainmentLink false$EBKf = MetaAdapterFactory.getContainmentLink(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x25174a6263dd595bL, 0x25174a6263dd5961L, "false");
+    /*package*/ static final SContainmentLink cards$mCeG = MetaAdapterFactory.getContainmentLink(0xe94dfae4e9d04770L, 0x965c58db5e543504L, 0x568258613b8467c7L, 0x568258613b8467caL, "cards");
   }
 
   private static final class PROPS {

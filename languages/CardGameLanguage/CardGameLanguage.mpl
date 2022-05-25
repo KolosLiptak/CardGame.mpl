@@ -27,8 +27,6 @@
       <dependencies>
         <dependency reexport="false">e94dfae4-e9d0-4770-965c-58db5e543504(CardGameLanguage)</dependency>
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
-        <dependency reexport="false">e068dd9a-5fd3-47b6-8170-214869710bf7(CardGameLanguage.sandbox)</dependency>
-        <dependency reexport="false">7d3a4f4c-6357-48a3-a93e-0d357359392e(Runtime)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="12" />
@@ -120,7 +118,7 @@
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
   </dependencyVersions>
   <runtime>
-    <dependency reexport="false">fe016498-d4a5-4437-82f4-cb4975ac2bd5(CardsJava)</dependency>
+    <dependency reexport="false">e068dd9a-5fd3-47b6-8170-214869710bf7(CardGameLanguage.sandbox)</dependency>
     <dependency reexport="false">7d3a4f4c-6357-48a3-a93e-0d357359392e(Runtime)</dependency>
   </runtime>
   <extendedLanguages>
