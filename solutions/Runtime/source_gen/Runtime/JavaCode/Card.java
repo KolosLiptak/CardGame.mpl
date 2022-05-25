@@ -12,6 +12,9 @@ public class Card {
     this.name = name;
   }
 
+  public Card() {
+  }
+
   public void addProperty(Property property) {
     properties.add(property);
   }

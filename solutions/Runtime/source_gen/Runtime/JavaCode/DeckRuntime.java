@@ -4,7 +4,7 @@ package Runtime.JavaCode;
 
 import java.util.ArrayList;
 
-public class DeckRuntime {
+public class DeckRuntime extends Collection {
   private ArrayList<Card> cards = new ArrayList<Card>();
 
 

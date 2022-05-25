@@ -4,6 +4,16 @@ package Runtime.JavaCode;
 
 
 public class Property {
+  /*package*/ String propName;
+  /*package*/ IntProperty intProp;
+  /*package*/ stringProperty stringProp;
 
-
+  public Property(String name, String value) {
+    propName = name;
+    stringProp.propertyValue = value;
+  }
+  public Property(String name, int value) {
+    propName = name;
+    intProp.propertyValue = value;
+  }
 }

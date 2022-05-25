@@ -8,19 +8,35 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
   </dependency>
+  <dependency className="Runtime.JavaCode.Collection" />
   <dependency className="Runtime.JavaCode.DeckRuntime">
     <classNode dependClassName="Runtime.JavaCode.Card" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode extendsClassName="Runtime.JavaCode.Collection" />
+  </dependency>
+  <dependency className="Runtime.JavaCode.GameRuntime">
+    <classNode dependClassName="Runtime.JavaCode.PlayerRuntime" />
+    <classNode dependClassName="java.util.ArrayList" />
   </dependency>
   <dependency className="Runtime.JavaCode.IntProperty">
     <classNode dependClassName="java.lang.String" />
-    <classNode extendsClassName="Runtime.JavaCode.Property" />
   </dependency>
-  <dependency className="Runtime.JavaCode.Property" />
+  <dependency className="Runtime.JavaCode.PlayerRuntime">
+    <classNode dependClassName="Runtime.JavaCode.Collection" />
+    <classNode dependClassName="java.util.ArrayList" />
+  </dependency>
+  <dependency className="Runtime.JavaCode.Property">
+    <classNode dependClassName="Runtime.JavaCode.IntProperty" />
+    <classNode dependClassName="Runtime.JavaCode.stringProperty" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="Runtime.JavaCode.Token">
+    <classNode dependClassName="Runtime.JavaCode.Property" />
+    <classNode extendsClassName="Runtime.JavaCode.Collection" />
+  </dependency>
   <dependency className="Runtime.JavaCode.stringProperty">
     <classNode dependClassName="java.lang.String" />
-    <classNode extendsClassName="Runtime.JavaCode.Property" />
   </dependency>
 </dependenciesRoot>
 
