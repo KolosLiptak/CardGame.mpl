@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144231330558:jetbrains.mps.baseLanguage.structure.ForStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <root nodeRef="r:257a61ab-d1de-4c34-bcbc-cb014d716878(runtime)/336528261077556007">
+    <file name="Property.java">
+      <node id="336528261077556281" at="10,0,12,0" concept="0" trace="Property#(Ljava/lang/String;)V" />
+      <node id="336528261077556352" at="13,0,15,0" concept="0" trace="Property#(I)V" />
+      <scope id="336528261077556284" at="10,33,10,33" />
+      <scope id="336528261077556355" at="13,30,13,30" />
+      <scope id="336528261077556281" at="10,0,12,0">
+        <var name="value" id="336528261077556302" />
+      </scope>
+      <scope id="336528261077556352" at="13,0,15,0">
+        <var name="value" id="336528261077556373" />
+      </scope>
+      <unit id="336528261077556007" at="6,0,16,0" name="runtime.Property" />
+    </file>
+  </root>
+  <root nodeRef="r:257a61ab-d1de-4c34-bcbc-cb014d716878(runtime)/7618477276655646536">
+    <file name="Card.java">
+      <node id="336528261078184246" at="10,0,11,0" concept="2" trace="properties" />
+      <node id="336528261078214743" at="11,0,12,0" concept="2" trace="name" />
+      <node id="336528261078223369" at="13,32,14,20" concept="1" />
+      <node id="336528261078228724" at="17,27,18,16" concept="5" />
+      <node id="336528261078198653" at="20,39,21,22" concept="1" />
+      <node id="336528261078222303" at="13,0,16,0" concept="0" trace="Card#(Ljava/lang/String;)V" />
+      <node id="336528261078228135" at="17,0,20,0" concept="4" trace="getName#()Ljava/lang/String;" />
+      <node id="336528261078198244" at="20,0,23,0" concept="4" trace="addProperty#(Lruntime/Property;)V" />
+      <scope id="336528261078222306" at="13,32,14,20" />
+      <scope id="336528261078228138" at="17,27,18,16" />
+      <scope id="336528261078198247" at="20,39,21,22" />
+      <scope id="336528261078222303" at="13,0,16,0">
+        <var name="cardname" id="336528261078223303" />
+      </scope>
+      <scope id="336528261078228135" at="17,0,20,0" />
+      <scope id="336528261078198244" at="20,0,23,0">
+        <var name="p" id="336528261078198428" />
+      </scope>
+      <unit id="7618477276655646536" at="8,0,24,0" name="runtime.Card" />
+    </file>
+  </root>
+  <root nodeRef="r:257a61ab-d1de-4c34-bcbc-cb014d716878(runtime)/7618477276655862878">
+    <file name="Deck.java">
+      <node id="336528261078096940" at="11,0,12,0" concept="2" trace="cards" />
+      <node id="336528261078109971" at="13,34,14,20" concept="1" />
+      <node id="336528261078123271" at="17,37,18,23" concept="1" />
+      <node id="336528261078157441" at="22,44,23,49" concept="1" />
+      <node id="7618477276656137844" at="13,0,16,0" concept="4" trace="addCard#(Lruntime/Card;)V" />
+      <node id="336528261078120405" at="17,0,20,0" concept="4" trace="removeCard#(Lruntime/Card;)V" />
+      <node id="336528261078139958" at="21,30,24,5" concept="3" />
+      <node id="336528261078138493" at="21,0,26,0" concept="4" trace="listAllCards#()V" />
+      <scope id="7618477276656137847" at="13,34,14,20" />
+      <scope id="336528261078120408" at="17,37,18,23" />
+      <scope id="336528261078139960" at="22,44,23,49" />
+      <scope id="7618477276656137844" at="13,0,16,0">
+        <var name="card" id="7618477276656144549" />
+      </scope>
+      <scope id="336528261078120405" at="17,0,20,0">
+        <var name="card" id="336528261078122494" />
+      </scope>
+      <scope id="336528261078138496" at="21,30,24,5" />
+      <scope id="336528261078139958" at="21,30,24,5">
+        <var name="i" id="336528261078139959" />
+      </scope>
+      <scope id="336528261078138493" at="21,0,26,0" />
+      <unit id="7618477276655862878" at="8,0,27,0" name="runtime.Deck" />
+    </file>
+  </root>
+</debug-info>
+
