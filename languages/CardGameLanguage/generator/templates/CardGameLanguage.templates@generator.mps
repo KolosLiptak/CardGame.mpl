@@ -347,7 +347,16 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="5UUBog1Ty7L" role="3cqZAp" />
+        <node concept="3clFbF" id="5UUBog220wg" role="3cqZAp">
+          <node concept="2OqwBi" id="5UUBog220GI" role="3clFbG">
+            <node concept="37vLTw" id="5UUBog220we" role="2Oq$k0">
+              <ref role="3cqZAo" node="5UUBog1RwoJ" resolve="game" />
+            </node>
+            <node concept="liA8E" id="5UUBog220NC" role="2OqNvi">
+              <ref role="37wK5l" to="2i9h:5UUBog21nq_" resolve="StartGame" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="5UUBog1Tytu" role="jymVt" />
@@ -371,7 +380,7 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="6hNI0IXetQN" role="jymVt" />
+    <node concept="2tJIrI" id="5UUBog1Xg$h" role="jymVt" />
     <node concept="3Tm1VV" id="s8_8St30V5" role="1B3o_S" />
     <node concept="n94m4" id="s8_8St30V6" role="lGtFl">
       <ref role="n9lRv" to="ssdz:3AQmWYMY6tQ" resolve="Game" />
@@ -963,24 +972,6 @@
     <node concept="3clFb_" id="qAfw2rognV" role="jymVt">
       <property role="TrG5h" value="init" />
       <node concept="3clFbS" id="qAfw2rognX" role="3clF47">
-        <node concept="1X3_iC" id="qAfw2rohOQ" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3cpWs8" id="qAfw2rognY" role="8Wnug">
-            <node concept="3cpWsn" id="qAfw2rognZ" role="3cpWs9">
-              <property role="TrG5h" value="deckRuntime" />
-              <node concept="3uibUv" id="qAfw2rogo0" role="1tU5fm">
-                <ref role="3uigEE" to="2i9h:4mLNJi_OB7r" resolve="DeckRuntime" />
-              </node>
-              <node concept="2ShNRf" id="qAfw2rogo1" role="33vP2m">
-                <node concept="HV5vD" id="qAfw2rogo2" role="2ShVmc">
-                  <property role="373rjd" value="true" />
-                  <ref role="HV5vE" to="2i9h:4mLNJi_OB7r" resolve="DeckRuntime" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="qAfw2rogo3" role="3cqZAp">
           <node concept="2OqwBi" id="qAfw2rogo4" role="3clFbG">
             <node concept="10M0yZ" id="qAfw2rogo5" role="2Oq$k0">
@@ -1325,7 +1316,6 @@
         <node concept="3clFbS" id="5UUBog1TxP6" role="3clF47" />
         <node concept="3Tm1VV" id="5UUBog1TxNL" role="1B3o_S" />
         <node concept="3cqZAl" id="5UUBog1TxOs" role="3clF45" />
-        <node concept="raruj" id="5UUBog1TxPX" role="lGtFl" />
         <node concept="17Uvod" id="5UUBog1TxPY" role="lGtFl">
           <property role="2qtEX9" value="name" />
           <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
@@ -1342,7 +1332,9 @@
             </node>
           </node>
         </node>
+        <node concept="raruj" id="5UUBog1W9xi" role="lGtFl" />
       </node>
+      <node concept="2tJIrI" id="5UUBog1W9a5" role="jymVt" />
       <node concept="3Tm1VV" id="5UUBog1TxKL" role="1B3o_S" />
     </node>
   </node>

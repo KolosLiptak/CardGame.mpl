@@ -21,7 +21,7 @@ public class Kamu extends GameRuntime {
       PlayerRuntime Computer = new PlayerRuntime();
       game.addPlayer(Computer);
     }
-
+    game.StartGame();
   }
 
   public void Setup() {

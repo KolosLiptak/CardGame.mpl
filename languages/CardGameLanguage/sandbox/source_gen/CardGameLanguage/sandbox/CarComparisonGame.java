@@ -25,7 +25,7 @@ public class CarComparisonGame extends GameRuntime {
       PlayerRuntime Board = new PlayerRuntime();
       game.addPlayer(Board);
     }
-
+    game.StartGame();
   }
 
   public void Setup() {

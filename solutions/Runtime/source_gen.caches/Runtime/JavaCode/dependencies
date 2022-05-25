@@ -16,12 +16,14 @@
     <classNode extendsClassName="Runtime.JavaCode.Collection" />
   </dependency>
   <dependency className="Runtime.JavaCode.GameRuntime">
+    <classNode dependClassName="Runtime.JavaCode.Phase" />
     <classNode dependClassName="Runtime.JavaCode.PlayerRuntime" />
     <classNode dependClassName="java.util.ArrayList" />
   </dependency>
   <dependency className="Runtime.JavaCode.IntProperty">
     <classNode dependClassName="java.lang.String" />
   </dependency>
+  <dependency className="Runtime.JavaCode.Phase" />
   <dependency className="Runtime.JavaCode.PlayerRuntime">
     <classNode dependClassName="Runtime.JavaCode.Collection" />
     <classNode dependClassName="java.util.ArrayList" />

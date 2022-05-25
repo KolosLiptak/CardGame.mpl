@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="9uh7wdtft5u5nphzll335wt8wer0mwd">
-  <files names="Card.java:Collection.java:DeckRuntime.java:GameRuntime.java:IntProperty.java:PlayerRuntime.java:Property.java:Token.java:stringProperty.java" />
+<product version="3" modelHash="h8sjymooarwbw3kax13tn1i6sdgczr">
+  <files names="Card.java:Collection.java:DeckRuntime.java:GameRuntime.java:IntProperty.java:Phase.java:PlayerRuntime.java:Property.java:Token.java:stringProperty.java" />
 </product>
 

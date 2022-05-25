@@ -529,6 +529,21 @@
         </node>
       </node>
     </node>
+    <node concept="312cEg" id="5UUBog1VZCv" role="jymVt">
+      <property role="TrG5h" value="phases" />
+      <node concept="3uibUv" id="5UUBog1VZtD" role="1tU5fm">
+        <ref role="3uigEE" to="33ny:~ArrayList" resolve="ArrayList" />
+        <node concept="3uibUv" id="5UUBog1VZCm" role="11_B2D">
+          <ref role="3uigEE" node="5UUBog1VZBW" resolve="Phase" />
+        </node>
+      </node>
+      <node concept="2ShNRf" id="5UUBog1W052" role="33vP2m">
+        <node concept="1pGfFk" id="5UUBog1W0H_" role="2ShVmc">
+          <property role="373rjd" value="true" />
+          <ref role="37wK5l" to="33ny:~ArrayList.&lt;init&gt;()" resolve="ArrayList" />
+        </node>
+      </node>
+    </node>
     <node concept="2tJIrI" id="5UUBog1Rqt4" role="jymVt" />
     <node concept="3clFb_" id="5UUBog1RqwI" role="jymVt">
       <property role="TrG5h" value="addPlayer" />
@@ -556,7 +571,43 @@
         </node>
       </node>
     </node>
+    <node concept="3clFb_" id="5UUBog1W3ZU" role="jymVt">
+      <property role="TrG5h" value="addPhase" />
+      <node concept="3clFbS" id="5UUBog1W3ZX" role="3clF47">
+        <node concept="3clFbF" id="5UUBog1W4$o" role="3cqZAp">
+          <node concept="2OqwBi" id="5UUBog1W5r9" role="3clFbG">
+            <node concept="37vLTw" id="5UUBog1W4$n" role="2Oq$k0">
+              <ref role="3cqZAo" node="5UUBog1VZCv" resolve="phases" />
+            </node>
+            <node concept="liA8E" id="5UUBog1W7pP" role="2OqNvi">
+              <ref role="37wK5l" to="33ny:~ArrayList.add(java.lang.Object)" resolve="add" />
+              <node concept="37vLTw" id="5UUBog1W7ET" role="37wK5m">
+                <ref role="3cqZAo" node="5UUBog1W4st" resolve="phase" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5UUBog1W3O$" role="1B3o_S" />
+      <node concept="3cqZAl" id="5UUBog1W3Zw" role="3clF45" />
+      <node concept="37vLTG" id="5UUBog1W4st" role="3clF46">
+        <property role="TrG5h" value="phase" />
+        <node concept="3uibUv" id="5UUBog1W4ss" role="1tU5fm">
+          <ref role="3uigEE" node="5UUBog1VZBW" resolve="Phase" />
+        </node>
+      </node>
+    </node>
+    <node concept="3clFb_" id="5UUBog21nq_" role="jymVt">
+      <property role="TrG5h" value="StartGame" />
+      <node concept="3clFbS" id="5UUBog21nqC" role="3clF47" />
+      <node concept="3Tm1VV" id="5UUBog21n6U" role="1B3o_S" />
+      <node concept="3cqZAl" id="5UUBog21npK" role="3clF45" />
+    </node>
     <node concept="3Tm1VV" id="5UUBog1RpQq" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="5UUBog1VZBW">
+    <property role="TrG5h" value="Phase" />
+    <node concept="3Tm1VV" id="5UUBog1VZBX" role="1B3o_S" />
   </node>
 </model>
 
