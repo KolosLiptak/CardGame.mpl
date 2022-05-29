@@ -148,7 +148,7 @@
     </language>
   </registry>
   <node concept="1H1zYA" id="5q2m64VxygR">
-    <property role="TrG5h" value="FranciaKartya" />
+    <property role="TrG5h" value="StandardDeck" />
     <node concept="1H01RP" id="llUQSpRrrU" role="1H1zYF">
       <property role="TrG5h" value="AceOfSpades" />
       <node concept="1H0bz6" id="llUQSpRrsj" role="1H0bRA">
@@ -1488,8 +1488,8 @@
       </node>
       <node concept="16X4NV" id="116IO95Xf_U" role="16X4NX">
         <property role="16X6Zs" value="4" />
-        <ref role="16X4NS" node="116IO95XfvY" resolve="BHand" />
         <ref role="16X4NQ" node="116IO95Xfwa" resolve="CHand" />
+        <ref role="16X4NS" node="116IO95WVVz" resolve="Cars" />
       </node>
     </node>
     <node concept="16WEaS" id="116IO95YNIv" role="16WEaR">
@@ -1629,19 +1629,19 @@
     <node concept="2bgsJ0" id="116IO95Xfv7" role="2bjzMM">
       <property role="TrG5h" value="Alice" />
       <node concept="2bjAEt" id="116IO95Xfvx" role="2fIUfD">
-        <property role="TrG5h" value="AHand" />
+        <property role="TrG5h" value="AliceHand" />
       </node>
     </node>
     <node concept="2bgsJ0" id="116IO95XfvU" role="2bjzMM">
       <property role="TrG5h" value="Bob" />
       <node concept="2bjAEt" id="116IO95XfvY" role="2fIUfD">
-        <property role="TrG5h" value="BHand" />
+        <property role="TrG5h" value="BobHand" />
       </node>
     </node>
     <node concept="2bgsJ0" id="116IO95Xfw4" role="2bjzMM">
       <property role="TrG5h" value="Cecil" />
       <node concept="2bjAEt" id="116IO95Xfwa" role="2fIUfD">
-        <property role="TrG5h" value="CHand" />
+        <property role="TrG5h" value="CecilHand" />
       </node>
     </node>
     <node concept="2bgsJ0" id="116IO95Zac7" role="2bjzMM">
